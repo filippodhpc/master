@@ -1,0 +1,1456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Commenti alle poesie foscoliane, per un'edizione digitale</title>         
+            <respStmt>
+               <resp>Codfica</resp>
+               <persName xml:id="FP">Filippo Pelacci</persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Università di Parma</publisher>
+            <pubPlace>Università di Parma</pubPlace>
+            <date>20??</date>
+            <availability>
+               <p> Questa risorsa è liberamente accessibile per uso personale o scientifico. Ogni uso commerciale è vietato. </p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author xml:id="UF">Ugo Foscolo</author>
+               <title>Ugo Foscolo, Opere</title>
+               <editor xml:id="FG">Franco Gavazzeni</editor>
+               <biblScope unit="volume">I</biblScope>
+               <publisher>Riccardo Ricciardi</publisher>
+               <pubPlace>Milano</pubPlace>
+               <date>1974</date>
+            </bibl>
+         </sourceDesc>
+         <!-- Secondo sourceDesc entro cui codifico le opere citate dai commentatori in relazione alle poesie di Foscolo-->
+         <sourceDesc>
+            <listBibl>
+               <bibl>...</bibl>
+            </listBibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="introduzione_generale">
+            <note>
+               <p>NOTA INTRODUTTIVA</p>
+               <p>Da Milano, il 13 aprile 1803, il Foscolo scriveva a Giovanni Rosini,
+               a Pisa: 
+               <quote source="#Foscolo_Epistolario">
+                  «Dal signor Gio. Battista Nicolini riceverete una copia dell’edizioncella 
+                  delle mie poesie ch’io feci stampare assai più emendate
+                  ed in più numero del manoscritto che nell’autunno scorso vi diedi. Se
+                  non ve le ha per anco mandate, scrivetegli: e se siete ancora d’intenzione 
+                  di stamparle seguite esattamente questa prima edizione di cui come vedrete ne ho 
+                  fatto stampare solo copie 260 numerate»
+               </quote> (<emph>Epistolario</emph>, I, pp. 177-8). 
+               Gli otto sonetti e l’ode <emph>A Luigia Pallavicini caduta da cavallo</emph> 
+               avevano infatti già visto la luce nel tomo IV del pisano
+               «Nuovo Giornale dei Letterati», dell’ottobre del 1802. È probabile
+               che un ritardo nella pubblicazione del fascicolo avesse impedito all’autore 
+               di prendere conoscenza di tale stampa, ciò che, unitamente
+               all’intenzione di accrescere la primitiva compagine di quattro nuovi
+               pezzi, può ben avere costituito il movente dell’edizione milanese del
+               Destefanis (di cui è cenno nella sopra citata lettera al Rosini), pubblicata 
+               tra il 2 aprile (data della dedica al Niccolini preposta alle
+               Poesie), e il 9 aprile del 1803 (data della lettera al libraio fiorentino
+               Guglielmo Piatti, in cui si notifica la spedizione al Niccolini di un
+               «pacchettino» contenente copie delle Poesie; la si veda in 
+               <bibl corresp="#Foscolo_Epistolario">
+                  Epistolario,I, p. 177
+               </bibl>
+               ). Né sorte diversa, stando a quanto desumiamo dalle righe
+               indirizzate al Rosini, pare sia toccata alla ristampa in opuscolo degli
+               otto sonetti e dell’ode, pure effettuata in Pisa (1803), circa la quale
+               il Mestica (p. CXXXVI) notava: 
+               «La data però 1803 crediamo doversi limitare ai principi di quell’anno (se pur tutta la stampa non fu terminata 
+               nel precedente decembre); poiché a mezzo aprile del 1803 suddetto era già fuori 
+               la prima edizione milanese (St. 12) recante poesie
+               nuove e correzioni alle già messe in luce a Pisa. Ma quel che per noi fa
+               soprattutto, è la data della dichiarazione: “Milano, agosto 1802” [la si
+               legge nel verso del frontespizio della seconda stampa pisana: “Ugo
+               Foscolo pubblica queste poche Poesie per rifiutare tutte le altre fino
+               ad oggi stampate, e segnatamente una lunga Oda a Bonaparte ornai
+               troppo divulgata, e il Tieste Tragedia inserita nel tomo X del Teatro
+               Moderno applaudito; cose tutte e troppo giovenili, e non sempre
+               pubblicate di consentimento dell’Autore. Milano; Agosto 1802”];
+               che segna la spedizione delle nove poesie da Milano a Pisa, perché
+               fossero là pubblicate». Il 13 aprile il Foscolo inviava poi al Bodoni
+               un esemplare dell’edizione Destefanis (<bibl corresp="#Foscolo_Epistolario">Epistolario, I, pp. 178-9</bibl>), di
+               cui il tipografo accusava ricevuta il 14 giugno, offrendosi inoltre di
+               <quote source="#Foscolo_Epistolario">
+                  «eseguire una ristampa in 4°»
+               </quote> tale da non riuscire 
+               <quote source="#Foscolo_Epistolario">
+                  «indegna di essere offerta a qualunque più schifiltoso bibliofilo del nostro sdruscito stivale» 
+               </quote>
+               (<emph>Epistolario</emph>, I, p. 182). La proposta incontrò il favore del
+               Nostro, che il 22 giugno 1803 scriveva al Bodoni: 
+               <quote source="#Foscolo_Epistolario">
+                  «Sono ancora nello stesso proposito di ristampare in 4° le mie poesie. Se il mio nome morrà con 
+                  me, que’ pochi versi vivranno almeno per l'immortalità del vostro» 
+               </quote>
+               (<emph>Epistolario</emph>, I, pp. 182-3). Il tipografo rispondeva in data 28 giugno 1803: 
+               <quote source="#Foscolo_Epistolario">
+                  «Sono tuttavia d’animo volonterosissimo per pubblicare in 4° grande i vostri 
+                  bei carmi che ottennero qui favorevole incontro anche presso gli Omeromastici più severi [...]. 
+                  Se mai aveste in pensiero di fare qualche correzione, indicatemela con ogni
+                  celerità, acciò possa giovarmene riproducendo le vostre poetiche
+                  produzioni» 
+               </quote>
+               (<emph>Epistolario</emph>, I, p. 183). Il poeta replicava con lettera
+               della fine giugno o dei primi di luglio 1803: 
+               <quote source="#Foscolo_Epistolario">
+                  «Starò alle condizioni che vi piacque di propormi; ed oltre le rade correzioni che mi paiono
+                  necessarie vi mando un altro sonetto [<emph>Un dì, s’io non andrò sempre
+                  fuggendo</emph>] che vi prego di stampare prima dell’ultimo» 
+               </quote>
+                  (<emph>Epistolario</emph>,
+               I, pp. 185-6). Della progettata stampa bodoniana, per ragioni che a
+               tutt’oggi restano oscure, non si fece poi nulla. In suo luogo, ancora
+               a Milano, per i tipi di Agnello Nobile, verosimilmente dopo il giugno 1803 
+               (se ancora sulla fine del mese il poeta era in trattative con
+               il Bodoni), vedeva la luce la ristampa delle <emph>Poesie</emph>, accresciuta del
+               sonetto in morte del fratello Giovanni, e con le veramente «rade
+               correzioni», interessanti la dedica al Niccolini, e le odi <bibl corresp="#Foscolo_OI">A Luigia
+               Pallavicini caduta da cavallo</bibl> e <bibl corresp="#Foscolo_OII">Alla amica risanata</bibl>. Inattendibile è
+               però la notizia bibliografica inviata dal Foscolo stesso a Giovan
+               Paolo Schultesius, da Firenze, il 31 ottobre 1812: 
+               <quote source="#Foscolo_Epistolario">
+                  «6. <emph>Poesie di Ugo Foscolo</emph> Milano 1803: è un volumetto contenente due <emph>Odi</emph> e 12 <emph>Sonetti</emph>; 
+                  l'edizioni quindi, stante la piccola mole, furono ripetute: ma
+                  perché mentr’io apparecchiava l’edizione di queste Poesie, altri la
+                  fece senza il mio consenso, molti versi, specialmente ne’ sonetti,
+                  sono stati stampati a capriccio: anzi ad una d’esse edizioni, e credo
+                  alla prima, manca un sonetto» 
+               </quote>
+               (<emph>Epistolario</emph>, IV, p. 192).</p>
+               <p>L’esile raccolta di dodici sonetti e di due odi, prima ancora che in
+               ragione della propria individualità stilistica, vale, fin nella sua consistenza 
+               numerica, quale traumatico correttivo nei confronti di esercizi ben diversamente corrivi, 
+               e insieme attesta un non pleonastico rispetto della tradizione lirica nazionale, 
+               omaggiata nel suo schema di maggior prestigio, il sonetto, e ancora parcamente 
+               tentata nella forma che per tutto il Settecento aveva costituito, al di fuori 
+               d’ogni esperimento più propriamente barbaro, l’aspetto più genuinamente
+               conservativo nella generale corruzione delle mode classicistiche, l’ode. Valutata con 
+               acuto senso storico la realtà del gioco politico che tra il ’97 e il ’98 era andato 
+               assumendo i tratti dell’avventura napoleonica, giudicata dal Foscolo con inalterata 
+               obiettività dal suo nascere al suo svanire, lungo l’arco intero della propria vita, 
+               precocemente e bruscamente posto di fronte a un dilemma che non poteva
+               esser risolto per nessuno dei due corni con piena soddisfazione, il
+               risultato che ne doveva sortire non poteva che essere di rapida e
+               definitiva ricapitolazione autobiografica, di congedo dalla poesia con
+               la poesia, sulla scorta di una tematica, certo non estranea all’ambito
+               della lirica nostrana, che un serrato giro d’esperienza gli aveva incalzantemente, 
+               e ad usura, proposto. Tematica non ulteriormente variabile nei molteplici 
+               risvolti di uno o più canzonieri, perché dal giudizio della situazione da 
+               cui nasceva immediatamente sottratta alla possibilità di meccaniche ripetizioni, 
+               e collocata in una prospettiva che, direttamente allacciante il presente al 
+               passato, esauriva nell’attimo stesso in cui si istituiva come tale, dimensioni 
+               da cui di nuovo potesse crescere un qualsiasi fare poetico, intenzionato a
+               fondarsi come riconoscimento e giudizio. Quale diverso significato
+               attribuire alla terzina suggellante il sonetto <emph>Pur tu copia versavi alma
+               di canto</emph>: 
+               <quote source="Foscolo_SXI">
+                  <l>«Però mi accorgo, e mel ridice amore,</l> 
+                  <l>che mal ponno sfogar rade, operose</l> 
+                  <l>rime il dolor che deve albergar meco»</l>
+               </quote>? Affermazione che, 
+               al di là dell’evidente valore dichiarativo, ha per noi
+               importanza tutta particolare in quanto stabilisce un nesso di natura
+               grammaticale tra l’apostrofe alla poesia e la constatazione del poeta:
+               <l>«che mal ponno sfogar rade, operose</l> 
+               <l>rime il dolor che deve albergar meco»</l>. Il legame costituito dal «Però» del v. 12, nel suo valore di
+               “per ciò”, “per questo”, rimanda infatti immediatamente al movente
+               dell’asserzione, e cioè prima ancora che alla fuga dell’«Aonia Diva»
+               in «compagnia dell’ore», del tempo insomma dei «fiorenti anni»,
+               alle conseguenze di tale abbandono o catabasi «per la via del pianto»
+               verso la «muta riva» di Lete, che è dimenticanza e silenzio proprio
+               e solo in quanto scorre al di fuori del tempo, rinviando alle «penose /
+               membranze», e, soprattutto, al «timor cieco» del futuro. Così che
+               rime pur «rade», limitate da vigile consapevolezza, e orazianamente
+               «operose», condotte dall’assiduo <emph>labor limae</emph> all’ultimo grado di finitezza, 
+               quali quelle stampate e ristampate quattro volte tra il 1802 e il
+               1803, «mal ponno sfogar», cioè esprimere nella forma di un giudizio
+               in sé maturo e compiuto, la condizione di caotica assenza di concrete
+               prospettive che, sottraendo all’uomo ogni possibile scelta, sembra
+               schiacciarlo sotto il peso di un anonimato ineffabile, tanto più difficile 
+               da rimuoversi, in quanto politicamente garantito dalla presenza di
+               un’oppressiva tirannide. Ciò che rende ragione dell’impossibilità di
+               tornare di lì innanzi a dar voce poetica alla propria esperienza, e, al
+               limite, sottintende anche la sfiducia a che la vita potesse restituirsi
+               al pensiero come giudizio (donde il presente «deve» del v. 14, in
+               luogo del più logico futuro). E ancora si noti come la constatazione
+               di non godere più dei favori della Dea, e dalle «penose / membranze»
+               e dal «timor cieco» del futuro d’esser costretto a prendere atto
+               dell’inadeguatezza di rime pur «rade» e «operose», è parallelamente,
+               ma separatamente, confermata da amore, che ridice, a stornare ogni
+               eventuale illusione, che anche il suo oggetto: 
+               <quote source="#Foscolo_OII">
+                  <l>«l’aurea beltate ond’ebbero</l>  
+                  <l>ristoro unico a’ mali</l> 
+                  <l>le nate a vaneggiar menti mortali»</l>
+               </quote>
+               , come tutto abbia senso d’umanità e intelligenza, soggiace alla dura
+               legge del timore del cieco futuro, del Caos; incapace di affrancarsi,
+               e di affrancare da una condizione di dolore, per la cui comprensione
+               gioverebbe certo richiamare la definizione sensistica, ove poi si
+               avesse riguardo d’avvertire che, salva l’identità degli effetti, le sue
+               cause vanno rintracciate in un universo non più metafisico, ma storico e politico. 
+               E perché tutto ciò non abbia ad esser reso pleonastico
+               dalla presenza di simile congedo in forma di sonetto, si badi che
+               la rievocazione della felice stagione della poesia, abbracciante la prima quartina 
+               e i primi due versi della seconda, in tanto si spiega,
+               in quanto funge da supporto all’asserzione, sintonizzata al presente:
+               <quote source="#Foscolo_SXI">
+                  <l>«non udito or t’invoco: ohimè! soltanto</l> 
+                  <l>una favilla del tuo spirto è viva»</l>
+               </quote>, 
+               da cui pure è partita, e a cui poi ritorna; e che quindi quale
+               cardine mediano (non a caso i versi citati si collocano in settima e ottava sede) 
+               consente che nelle terzine effetti e cause si scambino di posto, conservando 
+               l’alternanza delle quartine tra la rievocazione (qui ulteriormente ristretta dal «pur» del v. 10, con valore 
+               di “anche”, al suo ultimo oggetto, la poesia), e la constatazione esclamativa. 
+               Anche si osservi: una «favilla», vale a dire una tenue riserva di
+               verità e di giudizio ancora reperibile, e che però consente e spiega il
+               fatto che il poeta abbia coerentemente potuto, da ultimo, conferire
+               al proprio agire e pensare la forma della poesia, dopo aver toccato
+               tutti i tasti di una situazione delineatasi attraverso il conflitto della
+               persona con la storia, con il perentorio risalto che ogni età di crisi,
+               soggettivamente ed oggettivamente, comporta.</p>
+               <p>Il proposito foscoliano nel ristampare due volte, in breve giro di
+               tempo, presso il Destefanis e il Nobile, il ridotto manipolo dei sonetti 
+               e delle odi, è chiaramente espresso nella dedica al Niccolini delle
+               edizioni milanesi, ricalcante la dichiarazione citata, apposta nel verso
+               del frontespizio dell’edizione pisana del 1803, in data agosto 1802.
+               In essa è detto che quei versi vedevano la luce non perché fossero
+               d’esempio al dedicatario, né perché ad essi competesse di procacciare
+               onore all’autore, non professando questi poesia, ma per rifiutare
+               tutti gli altri, precedentemente divulgati per 
+               <quote source="Foscolo_Poesie_M">
+                  «vanità giovenile»
+               </quote>. Affermazione di particolare 
+               importanza perché nel tempo stesso in cui
+               veniva rifiutata la qualifica di poeta, di cui a quell’altezza cronologica
+               non potevano certo far fede undici, e poi dodici sonetti e due odi,
+               era implicitamente ribadita la volontà di praticare un taglio netto
+               con il proprio passato. Ciò che non suonava solo a condanna dell’occasionalità di un 
+               esercizio conformato su moduli spersonalizzati, ma
+               ancor prima significava por fine all’identificazione della propria immagine 
+               con quella di un tecnico dell’espressione letteraria, professionalmente 
+               investito di una distinzione categoriale, e come tale costretto in un giro angusto d’orizzonte, 
+               e implicitamente rilanciava la concezione di una poesia fondata sulla 
+               capacità della parola di rietimologizzarsi nella frizione con la realtà, 
+               per attingere un’autenticità che poteva istruirsi unicamente sul tronco di 
+               un’indipendente esperienza umana. Se anche il poeta si fosse risparmiato di renderci
+               esplicitamente edotti delle sue intenzioni, il significato delle stampe
+               pisana e milanesi non sarebbe risultato per questo men chiaro.</p>
+               <p>Ricordata la decisiva importanza dell’anno 1797 per la vita e l’opera del 
+               Foscolo nel quadriennio seguente, occorre anche tener presente che l’anno del Congresso di Lione, e della relativa orazione
+               (1802), non fu meno decisivo nel processo di certificazione di quanto
+               sino a quel tempo era rimasto allo stato fluido del sospetto. La rapida conclusione 
+               della stagione poetica apertasi con la pubblicazione degli otto sonetti e 
+               dell’ode alla Pallavicini, nelle edizioni milanesi del 1803 non è infatti 
+               imputabile alla sola presenza in esse della dedica al Niccolini, contenente 
+               l’esplicita ammissione sopra riferita, e dei quattro nuovi sonetti, e tra essi del 
+               cosiddetto <bibl corresp="#Foscolo_SIII">Alla Musa</bibl>, ma all’organizzazione di un succinto canzoniere suggellante 
+               un’esperienza politica e affettiva praticamente conclusa, e poeticamente ancora 
+               e solo significativa in quanto fondata sulla predicazione dell’impossibilità di andar 
+               oltre sé stessa. Con ciò non si vuol negare alla raccolta pisana la benché minima traccia 
+               di organicità nella seriazione dei pezzi. Ma non va sottaciuto come dopo le radicali apostrofi 
+               <bibl corresp="#Foscolo_SII">Non son chi fui; perì di noi gran parte</bibl> e <bibl corresp="#Foscolo_SXII">Che stai? già il secol l'orma ultima
+               lascia</bibl>, e l’amara perorazione contro l’imbarbarimento linguistico di
+               <bibl corresp="#Foscolo_SIII">Te nudrice alle muse, ospite e Dea</bibl>, sulla scorta dell’ultima terzina del
+               sonetto dedicato a Firenze, nostalgico in ordine a ragioni storiche e
+               biografiche, il tema erotico, pur interamente compreso nel registro
+               di una fondamentale disillusione, finisse con l’avere provvisoriamente il sopravvento, 
+               per essere improvvisamente interrotto dall’esclamativo autoritratto. 
+               L’omogeneità della raccolta pisana pare dunque affidarsi a interni allacci che, di sonetto in sonetto, 
+               garantiscono sul filo della varietà tematica l’unità d’esperienza che tradizionalmente
+               compete ad ogni canzoniere, per ridotta che ne sia l’estensione. Si
+               noti infatti come nella deduzione immediatamente tratta da <bibl corresp="#Foscolo_SII">Non son
+               chi fui; perì di noi gran parte</bibl> di <bibl corresp="#Foscolo_SXII">Che stai? già il secol l’orma ultima lascia</bibl>, ai vv. 7-8, 
+               il motivo della fiducia nella posterità della fama letteraria, poi corretto e 
+               rivolto nel senso di una piena fedeltà alla lettera alfieriana nell’ultima terzina 
+               del medesimo sonetto secondo la lezione delle stampe milanesi, brilli di luce 
+               solitaria sul fondo del seguente, deprecatorio, intorno alla sentenza capitale contro la lingua latina,
+               dove il trapasso dal latino al toscano delle terzine induce l’apologia
+               di Firenze del seguente <bibl corresp="#Foscolo_SVIII">E tu ne' carmi avrai perenne vita</bibl>:, a far da
+               quinta all’apparizione petrarchesca della donna amata, verosimilmente la Roncioni, 
+               cui si riferisce il gruppo dei seguenti <bibl corresp="#Foscolo_SIV">Perché taccia il rumor di mia catena</bibl>,
+               <bibl corresp="#Foscolo_SV">Così gl'interi giorni in lungo incerto</bibl>, <bibl corresp="#Foscolo_SVI">Meritamente, però ch’io potei</bibl>. 
+               E nel sonetto autobiografico, dove una rapidità lontana dalla sommarietà par 
+               risentire dell’epica <emph>grandeur</emph> della ritrattistica napoleonica, così incalzante 
+               nella composizione delle parti, la riassunzione di tutte le antinomie passate 
+               in rassegna sotto il paradigma dell’interesse individuale istituisce una coscienza 
+               del soggetto agente, maturata grazie alla sua puntualizzazione nel tempo, dal
+               suo dettagliato inveramento tematico, sino al suo naturale centro
+               d’informazione, di cui il poeta solo a quel punto, e con decisione
+               improvvisa, sembra prendere intera consapevolezza.</p>
+               <p>Venendo alle stampe milanesi notiamo innanzitutto come l’ordine
+               di quella del Destefanis sia rispettato nella seguente del Nobile, con
+               l’eccezione del sonetto <bibl corresp="#Foscolo_SX">in morte del fratello Giovanni</bibl>, introdotto in
+               terzultima sede (anziché in penultima, come il Foscolo aveva indicato al 
+               Bodoni nella citata lettera del luglio 1803), tra i cosiddetti
+               <bibl corresp="#Foscolo_SIX">A Zacinto</bibl> e <bibl corresp="#Foscolo_SXI">Alla Musa</bibl>. Dopo che il proemiale 
+               <bibl corresp="#Foscolo_SI">Alla Sera</bibl>
+               àncora solidamente la prospettiva foscoliana ad un fondo di metafisico solipsismo, 
+               i sonetti <bibl corresp="#Foscolo_SII">Non son chi fui; perì di noi gran parte</bibl> e 
+               <bibl corresp="#Foscolo_SXII">Che stai? già il secol l'orma ultima lascia</bibl> sono distanziati, rispettivamente all’inizio, in seconda sede, 
+               e alla fine della raccolta, onde non precipitare, dalla premessa alla deduzione, 
+               l’articolarsi di un’esperienza complessiva (diversamente da quanto risultava nella stampa pisana,
+               ancora aperta alla possibilità di una ripresa futura). Ciò viene invece
+               scongiurato dalla collocazione in ultima sede del sonetto <bibl corresp="#Foscolo_SXII">Che stai?
+               già il secol l’orma ultima lascia</bibl>, nel quale il dato di maggior rilievo
+               è costituito dalla definizione di un preciso ambito cronologico, racchiudente nel limite 
+               dell’anno 1800 un’esperienza, tanto più organicamente amalgamabile, in quanto costantemente 
+               passata al vaglio di un’ottica personale, nella forma di un giudizio legato alle circostanze
+               storiche. Fatto in sé di primaria importanza, e perché torna a conferma
+               di quanto nella dedica al Niccolini era stato speso a favore del carattere non programmatico e 
+               continuativo dell’esercizio poetico, e perché su tale principio si fondava la possibilità 
+               stessa di far poesia, e perché infine tale dato (l’anno 1800) ci fornisce la prova 
+               inequivocabile della volontà del poeta di conferire alla serie dei sonetti una determinata
+               struttura, considerato che quattro d’essi risultano composti dopo l’agosto del 1802. 
+               Quanto di indefinito a carico della rinuncia a valersi
+               della poesia quale mezzo di istruzione del proprio giudizio è reperibile nella 
+               raccolta pisana, non potrebbe ripetersi un anno appresso, 
+               nella misura in cui le «libere carte» non potevano più identificarsi con
+               un esercizio necessitante, come la poesia, di quell’esatto, riposato e
+               riconosciuto inserimento della dialettica individuale nella dialettica
+               storica che il nuovo conformismo napoleonico sembrava avere dissuaso per sempre, 
+               dopo il Congresso di Lione del 1802. E però non
+               cadrà nel vuoto l’impegno foscoliano della seconda quartina del
+               sonetto <bibl corresp="#Foscolo_SXII">Che stai? già il secol l’orma ultima lascia</bibl>, di consegnarsi cioè
+               alla considerazione dei posteri grazie alle «fatiche dotte», poiché La
+               <bibl corresp="#Foscolo_Chioma">Chioma di Berenice</bibl>, questo giovanile crogiolo della variamente discussa 
+               erudizione foscoliana, raccogliendone immediatamente l’eredità, stava appunto 
+               a dimostrare che a chi non era concesso di «altamente oprar», stante la 
+               lunghezza del cammino artistico (v. 12), le «libere carte» non potevano 
+               più offrirsi dal contatto con il presente, precluso ad ogni esperienza 
+               il cui contenuto fosse quel «furor di gloria» capace di accendere, <emph>post mortem</emph>, 
+               a «egregie cose il forte animo», ma dovevano fatalmente recuperare il senso 
+               della loro necessità di lontano, da un discorso che, affondando nella storia, 
+               e conseguentemente rispecchiandosi nell’erudizione, riemergesse oltre l’ostacolo 
+               del presente, definitivamente garantito dalla certezza di una
+               misurazione distesa nell’unica direzione praticabile. Che è quanto anche si legge, 
+               in forma più circostanziata, nella dedica al Niccolini (30
+               luglio 1803) nella <emph>Chioma di Berenice</emph>: 
+               <quote source="#Foscolo_Chioma">
+                  «Né mi sarei accinto a farla da commentatore se in questa infelice stagione non avessi bisogno di distrarre 
+                  come per medicina la mente ed il cuore dagli argomenti pericolosi a’ quali 
+                  attendo per istituto. Così Catullo sebbene per la tristezza allontanato dalle vergini 
+                  Muse, tentava nondimeno l’obblio della sua sciagura traducendo per Ortalo questo medesimo 
+                  poemetto»
+               </quote>. Proposito la cui durata non ambiva estendersi, come in effetti
+               non si estese, oltre quel punto, se già la promessa di una diversa
+               poesia si affacciava sulla fine della dedica della <emph>Chioma di Berenice</emph>,
+               tramite l’epigrafica citazione dei vv. 8-9 del <bibl corresp="#PSVirgilio_Appendix">Culex dell’Appendix</bibl>
+               virgiliana: 
+               <quote source="#Foscolo_Chioma">
+                  <l>«Posterius graviore sono tibi musa loquetur</l>
+                  <l>nostra: dabunt cum securos mihi tempora fructus»</l>
+               </quote>; 
+               di tutta trasparenza, quando si 
+               pensi alle stagioni successive della poesia foscoliana. Lecito
+               sembra poi spingersi a considerare lo spostamento di <bibl corresp="#Foscolo_SVIII">E tu ne’ carmi
+               avrai perenne vita</bibl>, collocato nel «Nuovo Giornale dei Letterati» tra
+               <bibl corresp="#Foscolo_SIII">Te nudrice alle muse, ospite e Dea</bibl> e <bibl corresp="#Foscolo_SIV">Perché taccia il rumor di mia catena</bibl>, 
+               quasi spia della nuova volontà del poeta di passare senza indugio
+               da un sonetto all’altro onde immediatamente dar corpo a una dimostrazione 
+               di conservazione petrarchesca che contestasse il progressivo stemperarsi nel 
+               «sermon straniero» del toscano «parlar celeste».
+               E ciò perché l’ordine della stampa pisana legava la serie <bibl corresp="#Foscolo_SIV">Perché taccia
+               il rumor di mia catena</bibl>, <bibl corresp="#Foscolo_SV">Così gl’interi giorni in lungo incerto</bibl>, 
+               <bibl corresp="#Foscolo_SVI">Meritamente, però ch’io potei</bibl> esclusivamente allo sviluppo del tema erotico,
+               sul quale praticamente si chiudeva l’embrione di raccolta. Sintomatico, 
+               e per me decisivo, è che la successione da <bibl corresp="#Foscolo_SIV">Perché taccia il rumor
+               di mia catena</bibl> a <bibl corresp="#Foscolo_SVII">Solcata ho fronte, occhi incavati intenti</bibl> sia conservata
+               nelle stampe Destefanis e Nobile, e che a contenerla, a metterla
+               chiaramente in parentesi, siano chiamati due sonetti contigui nel
+               1802: <bibl corresp="#Foscolo_SIII">Te nudrice alle muse, ospite e Dea</bibl> e <bibl corresp="#Foscolo_SVIII">E tu ne’ carmi avrai perenne
+               vita</bibl>, così che, a questo punto, il sonetto nelle quartine sembra innanzi 
+               tutto assolvere la funzione di convertire il prestigio linguistico
+               toscano di <bibl corresp="#Foscolo_SIII">Te nudrice alle muse, ospite e Dea</bibl>, in quello più ampio di
+               una geografia culturale, emblematicamente riassunta da un’immagine
+               (v. 2: «sponda»), ridotta in seguito, nelle terzine, dalla sua astrazione 
+               retorica alla materiale connotazione di un luogo, ideale sin che si
+               vuole, ma rilevante nell’ambito della biografia foscoliana, a suggello
+               delle ragioni culturali e affettive della precoce scelta di quella patria
+               morale fiorentina, splendidamente affermata più tardi nei vv. 165-
+               81 dei <bibl corresp="#Foscolo_Sepolcri">Sepolcri</bibl>. Ma qui la definizione di una scelta ideale presuppone
+               ed implica la rescissione dei legami con la patria reale, che, non meno
+               illustre della toscana quanto ad ascendenze culturali campite tra il
+               mito e l’epopea omerica, viveva inoltre nella memoria di affetti inesorabilmente 
+               allontanati nel tempo dal tragico evento di Campoformio. Perché la negazione di 
+               <bibl corresp="#Foscolo_SIII">Te nudrice alle muse, ospite e Dea</bibl> si perfeziona solo nel celebre 
+               <bibl corresp="#Foscolo_SIX">Né più mai toccherò le sacre sponde</bibl> (e
+               nella Nobile, non felicemente, nella coppia <bibl corresp="#Foscolo_SIX">Né più mai toccherò le
+               sacre sponde</bibl> e <bibl corresp="#Foscolo_SX">Un dì, s’io non andrò sempre fuggendo</bibl>: introducendo
+               cioè un elemento di dissidio tra i vv. 13-4 del primo e i corrispondenti
+               del secondo): dove il canto promesso in luogo della preziosa sepoltura 
+               è l’elemento portante oltre la struttura del sonetto in questione,
+               e insieme l’allaccio e la proposta, il tema sulla cui negazione si
+               costruirà a sua volta il seguente _Pur tu copia versavi alma di canto_,
+               che, quale congedo dalla poesia, vale soprattutto in quanto ribadisce
+               l’inadeguatezza delle «rade, operose / rime» a rompere un cerchio
+               che si profila progressivamente, e materialmente si concreta nel tempo 
+               stesso in cui si attua una presa di coscienza (dal dubitativo «Forse» al 
+               pleonastico «Che stai?»), che di una graduale negazione vive,
+               ma che infine in una totale negazione si identifica. Essa è poi circoscritta 
+               dal conclusivo <bibl corresp="#Foscolo_SXII">Che stai? già il secol l’orma ultima lascia</bibl>, nel
+               senso di un’ulteriore e suprema precisazione delle residue possibilità
+               delle «libere carte» di tornare a contare per il futuro, oltre il giro
+               di boa di una scadenza secolare, coincidente con l’esaurimento di
+               un’esperienza determinata. E ancora si noti che se la stampa pisana
+               differisce dalle due milanesi quanto alla disposizione della materia, si
+               accorda poi con la stessa circa i criteri seguiti nell’ordinarla. Nell’ambito 
+               infatti della forma chiusa del sonetto, tanto gli agganci lineari
+               di quella, quanto la più complessa e circolare struttura di queste,
+               obbediscono all’intento del poeta di passare rapidamente da un tema
+               in qualche modo concatenato all’altro, sfruttando l’affinità delle cellule di cui veniva 
+               a comporsi un discorso, così rilevato nei nodi del
+               suo sviluppo. La prima prova, insomma, in fase pre-pindarica, e
+               formalmente tradizionale, della simpatetica contiguità delle 
+               commessure e dei trapassi della sintassi dei <bibl corresp="#Foscolo_Sepolcri">Sepolcri</bibl>.
+            </note>
+         </div>
+         <div type="introduzione_generale" corresp="#dedica">
+            <note target="#inserisci"><!-- ricorda di inserire il target-->
+               I. <emph>Sat.</emph>, Il, 6, 62: 
+               <quote source="#Orazio_Satire">
+               «ducere sollicitae iucunda oblivia vitae»
+               </quote> («trarre lieto oblio della vita affannosa»).
+            </note> 
+            <note target="#inserisci"> <!-- ricorda di inserire il target-->
+               2. Giovanni Battista Niccòlini (Bagni di San Giuliano [Lucca], 29 ottobre 1782-
+               Firenze, 20 settembre 1861). Letterato. Laureatosi in legge a Pisa, fervente repubblicano, 
+               fu dapprima impiegato all’ufficio delle Riformagioni di Firenze (1804); professore di 
+               mitologia e storia dal 1807, indi segretario e bibliotecario dell’Accademia di
+               belle arti, maestro dei paggi alla corte di Elisa Baciocchi, finalmente ottenne 
+               l’incarico di bibliotecario della Palatina sotto il governo granducale.
+               Nella sua prevalente attività drammatica, caratterizzata da un costante impegno 
+               politico repubblicano e nazionale, si segnalano le tragedie Antonio
+               Foscarini (1827), Giovanni da Precida (1830) e soprattutto, Arnaldo da
+               Brescia (1849), rappresentato come lo strenuo difensore della libertà contro 
+               la tirannide imperiale (Federico Barbarossa) e papale (Adriano VI). Il
+               Foscolo, in segno di particolare amicizia e stima, gli dedicò oltre l’edizione
+               delle sue Poesie, anche <bibl corresp="#Foscolo_Chioma">La chioma di Berenice</bibl> (1803).
+            </note>
+         </div>
+         <div corresp="#O1">
+            <div type="introduzione">
+               <note>
+                  L’ode, composta a Genova per l’occasione costituita dall’incidente equestre occorso, 
+                  tra la fine di giugno e l’inizio di luglio del 1799, a Luigia
+                  Ferrari Pallavicini (Varese Ligure 1772-Genova 1841) - sposa diciassettenne 
+                  al marchese Domenico Pallavicini (morto nel 1805), e passata a
+                  seconde nozze nel 1818 con il segretario del locale consolato francese
+                  Stefano Prier -, vide primamente la luce in un opuscolo intitolato <emph>Omaggio
+                  a Luigia Pallavicini</emph>, Genova, Anno VIII, Stamperia Frugoni, in cui,
+                  oltre al Foscolo, erano presenti i commilitoni ed amici Giovanni Fantuzzi
+                  (Belluno 1762-Genova 1800), Giuseppe Giulio Ceroni (San Giovanni
+                  Lupatoto [Verona] 1774-Governolo 1813), e Antonio Gasparinetti (Ponte
+                  di Piave [Treviso] 1777-Milano 1824). Come è noto il Foscolo giunse a
+                  Genova con i resti della divisione comandata dal Macdonald dopo il 10
+                  luglio 1799, trattenendovisi sino a tutto il mese di novembre, per trasferirsi
+                  a Nizza, e far quindi ritorno nel capoluogo ligure dopo il 10, e prima del
+                  15 marzo 1800, e rimanervi sino alla sua resa, il 4 giugno 1800. Noto è
+                  pure che il Fantuzzi perse la vita durante l’attacco alla posizione della
+                  Coronata, il 2 maggio 1800, e che della “caduta” della Pallavicini nel
+                  <emph>Deserto di Sestri</emph>, oltre che nella <bibl corresp="#Petracchi_Galleria">Galleria Ligure</bibl> di Angelo Petracchi (di
+                  cui la «Gazzetta Ligure» dava notizia il 14 dicembre 1799), era ancora
+                  menzione nell’apologo ceroniano in ottave <bibl corresp="#Ceroni_Pappagalletto">Il papagalletto</bibl> (di cui la sopra
+                  citata «Gazzetta» dava notizia 1’8 marzo 1800). Sulla scorta di tali dati,
+                  considerata l’estensione reale dell’anno VIII (23 settembre 1799-19 agosto 1800), 
+                  non possiamo quindi spingerci oltre l’indicazione dell’arrivo
+                  del Foscolo a Genova come termine <emph>post quem</emph> della composizione e
+                  stampa dell’<emph>Omaggio</emph>, e della morte del Fantuzzi come termine <emph>ante
+                  quem</emph>, escludendo, per quanto più propriamente riguarda il periodo di
+                  composizione, i mesi dal dicembre 1799 al marzo 1800 (ma nulla, al limite, 
+                  ci impedirebbe di ipotizzare che l’ode, composta dal Foscolo prima della partenza 
+                  alla volta di Nizza, venisse stampata a Genova durante la sua assenza, o che 
+                  l’intero <emph>Omaggio</emph> fosse allestito e reso noto dopo il ritorno del Nostro 
+                  dalla Francia, all’altezza dell’impresa ceroniana della primavera del 1800, 
+                  se solo fosse lecito supporre che, a quasi un anno di distanza dall’incidente, 
+                  le migliorate condizioni di salute della Pallavicini avessero riattizzato 
+                  il fervore augurale della galante schiera dei poeti-soldati, ciò che, indirettamente, 
+                  verrebbe ad essere confermato da un biografo solitamente bene informato, quale il Carrer,
+                  là dove, relativamente all’ode genovese, scrive: «La gioventù, la bellezza, i marziali 
+                  esercizi della cavalcatrice gentile infiammarono le fantasie de’ poeti avvezzi,
+                  ad una coi non poeti, a seguirne i passi con desiderio. Riavutasi, si volle
+                  cantarne la guarigione, e parecchie poesie vennero in gara. Primeggiò
+                  quella del Foscolo, per avventura la più perfetta delle brevi liriche da
+                  esso composte», Vita di Ugo Foscolo, p. XXXI, in <bibl corresp="#Carrer_Poesie">Prose e Poesie edite ed
+                  inedite di Ugo Foscolo, ordinate da Luigi Carrer, e corredate della vita
+                  dell’Autore</bibl>, Venezia, Co’ Tipi del Gondoliere, 1842).
+                  L’ode ha, da sempre, riassunto agli occhi degli addetti ai lavori, il polo
+                  settecentesco, edonistico, della cultura foscoliana, in contrapposizione al
+                  più risentito impegno intellettuale e morale riscontrabile nel successivo
+                  testo indirizzato all’Arese; dove quanto di mitologico sarebbe in quella disposto, quasi fregio architettonico dell’agile strofe, si troverebbe convertito in questa in sostanza speculativa, 
+                  secondo le ben note costanti del vaticinante e divinatorio classicismo foscoliano. 
+                  Il “progresso” degli studi si è pertanto volta a volta puntigliosamente, quanto 
+                  astrattamente, misurato nella rilevazione stilistica del tasso di settecentismo presente nell’ode alla
+                  Pallavicini, o, per converso, nella scoperta dei precorrimenti tematici e
+                  “poetici” dell’ode <bibl corresp="#Foscolo_OII">Alla amica risanata</bibl>, in ogni caso ignorando la vera storia
+                  del testo della “caduta”, di cui, solo oggi, disponendo dell'<emph>editio princeps</emph>
+                  genovese, è possibile seguire per intero l’evoluzione. A ricondurre simili
+                  ipotesi nel solco di una più realistica valutazione, così come a far giustizia
+                  dell’opinione di quanti ritennero miracolosa e improvvisa la maturità stilistica
+                  dell’ode alla Pallavicini, soprattutto se confrontata con la non eccelsa
+                  produzione precedente, basterà osservare come il Foscolo abbia, più che
+                  per qualsiasi altro testo, inclusa l’ode per l’Arese, di ristampa in ristampa,
+                  dal 1799-1800 al 1803, costantemente lavorato di lima intorno a quello
+                  che, alla luce dei dati a tutt’oggi noti, rappresenta l’inserto più arcaico
+                  nella compagine delle Poesie (ove <bibl corresp="#Foscolo_SIII">Te nudrice alle muse, ospite e Dea</bibl> non sia
+                  stato composto nel 1798). Con ciò non si intende passare sotto silenzio
+                  l’innegabile parentela dell’ode con la tradizione, tipicamente settecentesca,
+                  delle accademie di versi recitati “all’improvviso” su tema obbligato, cui
+                  sembra affine l'<emph>Omaggio</emhp>: parentela evidente innanzitutto nel metro che,
+                  come notò il Ferrari, è quello stesso della <bibl corresp="#Frugoni_Grotta">Grotta magica nel giardino
+                  di Colorno</bibl> di Carlo Innocenzo Frugoni, e, aggiungiamo, nella pur vasta
+                  produzione frugoniana, ancora e solo dell’ode <bibl corresp="#Frugoni_Barattieri">Al Signor conte Barattieri
+                  piacentino</bibl>. E tuttavia la rarità del metro in ambito settecentesco, oltre che
+                  dalla sua più che bassa frequenza nell’opera frugoniana, risulta, per citare
+                  <emph>auctoritates</emph> vicine alla sensibilità del Foscolo giovane, dalla sua totale assenza 
+                  in Savioli, Fantoni, Vittorelli, così come in Parini, in cui la strofe
+                  dell’ode <emph>A Luigia Pallavicini</emph>, con gli sdruccioli non rimati in seconda e
+                  quarta sede, compare nella forma classica e consueta, composta da quattro
+                  settenari a rima alterna, e da un distico, pure settenario, a rima baciata
+                  (ancora si segnala che in Parini gli sdruccioli in seconda e quarta sede si
+                  presentano unicamente nella strofe, peraltro di cinque versi, del <bibl corresp="#Parini_Pericolo">Pericolo</bibl>,
+                  dai cui vv. 41-5 il Foscolo mutuò inizialmente l’immagine dello sciogliersi
+                  della chioma di Pallade presso la fonte ascrea). Due volte la strofe è inoltre
+                  usata dal Bertola, nelle odi <bibl corresp="#Bertola_Corazza">Al signor abate Vincenzo Corazza</bibl> (di cui non
+                  sarà superfluo ricordare l’eccezionale personalità metrica), e <emph>A Nelae</emph> (di
+                  cui vai la pena di rilevare che i vv. 1-3 suonano come segue: 
+                  <quote source="#Bertola_Nelae">
+                     <l>«Questi sono i beati</l>  
+                     <l>poggi che in mar si specchiano:</l>  
+                     <l>di giovinezza ornati»</l>
+                  </quote>
+                  ). E neppure, secondo giustamente notò G. Carducci, in <emph>Lirici del secolo XVIII</emph>,
+                  Firenze, Barbèra, 1871, p. LXXXIX, par lecito trascurare, per quanto concerne i vv. 43-84, 
+                  l’esemplare funzione di modello assolta dai vv. 33-72 dei <bibl corresp="#Lamberti_Cocchi">Cocchi</bibl> di Luigi Lamberti. 
+                  Si vuole infatti solo avvertire che la perfezione stilistica 
+                  della “caduta”, e la sua apparentemente contraddittoria, e inconfutabile, datazione, 
+                  sono frutto di un assiduo lavoro di revisione, condotto in tempi successivi, e, 
+                  che più conta, diversamente caratterizzati.
+                  Quale finalmente appare, all’altezza della stampa Nobile del 1803, l’ode
+                  appartiene non già al poeta unicamente responsabile dei sia pur discretamente 
+                  confezionati, ma in fondo manieristici versi dell’apprendistato veneziano, 
+                  ma all’assai più originale e consapevole autore dei dodici sonetti e
+                  dell’ode <bibl corresp="#Foscolo_OII">Alla amica risanata</bibl>. Si ponga intanto attenzione alla rigorosa e
+                  semplice articolazione della “caduta” (in ciò veramente ligia ai grandi
+                  modelli pariniani), constante, come già notò il De Robertis, di due sezioni 
+                  centrali di carattere descrittivo (rispettivamente dal v. 1 al v. 36,
+                  e dal v. 43 al v. 78, di complessivi trentasei versi ciascuna), e di una chiusa
+                  augurale (vv. 91-108), collegate tra di loro da una (vv. 37-42), e da due
+                  strofe (vv. 79-90), in persona prima. Tale struttura è fondamentalmente la
+                  stessa, tanto in G che in N (per le sigle delle stampe usate qui e in seguito, vedi 
+                  la nota al testo nel II tomo). Al suo interno l’innovazione più cospicua 
+                  si registra a partire da D, e riguarda i vv. 19-24, come detto desunti dai vv. 41-5 del 
+                  <bibl corresp="#Parini_Pericolo">Pericolo</bibl> (e anche là abbracciatiti l’intera strofe).
+                  In G infatti la descrizione della chioma della Pallavicini, e il conseguente
+                  parallelo con quella di Pallade (vv. 19-24), così come la successiva declinazione 
+                  di ulteriori attributi (vv. 25-30), erano chiusi nella giustezza della
+                  strofe, senza relazioni sintattiche con quanto precedeva, venendo pertanto
+                  a vanificare, in ragione dell’iterata interruzione elencativa, l’effetto deprecatorio 
+                  di forte stacco tra la prima e la seconda parte dell’ode, realizzantesi
+                  in forma esclamativa all’altezza del v. 37 [31]. In D a ciò si ovvia grazie
+                  all’introduzione dell’immagine della danza, che, oltre a stabilire un legame
+                  sintattico con la terza strofe (vv. 13-8), v. 13: «Or te piangoli gli amori»,
+                  v. 19: «E te chiama la danza» (analogo a quello dei vv. 28-30 dell’ode
+                  <emph>Alla amica risanata</emph>: 
+                  <quote source="#Foscolo_OII">
+                     <l>«te, Dea, mirando obbliano</l> 
+                     <l>i garzoni le danze,</l> 
+                     <l>te principio d’affanni e di speranze</l>
+                  </quote>
+                  »), motiva cinematicamente lo sciogliersi
+                  della chioma, giustificando da un punto di vista di idoleggiamento ornamentale 
+                  l’ampia perifrasi mitologica (analoga a quella d’esordio dell’ode per
+                  l’Arese, egualmente svolta nella misura della strofe), a sua volta arricchita, a
+                  fronte della primitiva citazione pariniana, di idee accessorie, direttamente in
+                  relazione con la fonte sfruttata da Parini, vale a dire l’inno <bibl corresp="#Callimaco_Pallade">A Pallade</bibl> di Callimaco 
+                  (di cui nella <bibl corresp="#Foscolo_Chioma">Chioma di Berenice</bibl>, Considerazione IV, <emph>Sacrificii di Chiome</emph>, 
+                  Milano, Dal Genio Tipografico, 1803, p. 174, è anche menzionato l’inno
+                  <bibl corresp="#Callimaco_Apollo">Ad Apollo</bibl>). La contiguità dell’innovazione introdotta nella stampa Destefanis 
+                  con la preziosa esperienza di una letteratura derivata dal raffinato filone
+                  della poesia eziologica alessandrina, scoperta o riscoperta in occasione del lavoro 
+                  di traduzione e commento della versione catulliana del poemetto callimacheo, 
+                  è del resto confermata da uno dei frammenti delle Grazie, pubblicati nella Considerazione XIL, 
+                  <emph>Chiome bionde</emph>, della <emph>Chioma di Berenice</emph>, cit., pp. 209-10, là dove l’immagine della 
+                  chioma di Pallade ritorna, quasi variante, non importa se ubicata in un prima o in un dopo, 
+                  dei vv. 19-30 dell’ode <emph>A Luigia Pallavicini caduta da cavallo</emph>: 
+                  <quote source="#Foscolo_Chioma">
+                     <l>«Involontario nel Pierio fonte</l>  
+                     <l>vide Tiresia giovinetto i fulvi</l> 
+                     <l>capei di Palla liberi dall’elmo </l>
+                     <l>coprir le rosee disarmate spalle;</l> 
+                     <l>sentì l’aura celeste, e mirò le onde</l> 
+                     <l>lambir a gara della Diva il piede</l> 
+                     <l>e spruzzar riverenti e paurose</l> 
+                     <l>la sudata cervice e il casto petto».</l>
+                  </quote>
+                  E ancora si noti come il rapporto dei sopra citati vv. 19-30 con la fonte,
+                  venga definitivamente precisato solo in N. È il caso dell’impropria lezione
+                  «dall’eliconio» (v. 26) - e giustamente il Ferrari osservava: «distratto [il
+                  Foscolo] forse dal pensiero che Pallade si bagnava nel fiume eliconio quando fu 
+                  vista da Tiresia: il che pure gli porse argomento di poesia nel frammento delle Grazie 
+                  che stampò nel 1803 nella Chioma di Berenice» -, rettificata in «dall’inachio» in N, 
+                  anche “migliorata” al V. 32 [26], con la sostituzione di «dal tuo labbro» a 
+                  «dalla bocca» di GPD, dettata dall’esigenza di distinguere semanticamente la <emph>facies</emph> della 
+                  Pallavicini da quella equina dei vv. 49-50 [43-4]: «fuma / la bocca». Al registro di una sempre
+                  più esatta pertinenza classicistica (s’intenda all’interno della cultura foscoliana, e vedi 
+                  la nota al v. 8) sarà inoltre da ascriversi l’evoluzione della lezione dei vv. 7-8, 
+                  dalla zeppa: «quel dì, che i monti empiea / di forsennati
+                  gemiti» di G, all’ancora generico: «il dì che insana empiea / gl’idei monti
+                  di gemiti» di P, al definitivo: «quel dì che insana empiea / il sacro Ida di
+                  gemiti» di D N, o il trapasso dal frusto ricorso ad Esculapio dei vv. 15-8 di G:
+                  «[. . .] fiori / su l’ara d’Esculapio / e sacrificio [P sacrifizii], e voti / offron
+                  mesti e devoti», alla mitologicamente più rara autorità apollinea di D N:
+                  «[. . .] fiori / votivi all’ara portano / d’onde il grand’arco suona / del figlio
+                  di Latona». Come già segnalò il Ferrari, Apollo, oltre a fruire dell’appellativo 
+                  omerico di «<emph>Dall’arco d'argento</emph>», nelle arti plastiche è rappresentato
+                  impugnante l’arco, e calpestante un pitone; arco e frecce, secondo alcuni
+                  mitologi, «indicherebbero la forza del sole purificante la terra piena di
+                  cattivi umori simboleggiati nel serpente pitone». Ciò che, stante l’implicito
+                  rivolgimento stagionale cui il mito di Apollo in tale accezione pare riferirsi, 
+                  si attaglierebbe, assai più propriamente che non la consueta evocazione di 
+                  Esculapio, al tempo di composizione dell’ode (anche se l’innovazione riguarda le stampe 
+                  del 1803), ove lo stesso, come sembra probabile, coincidesse con la primavera del 1800. 
+                  D’estrazione ancora classicistica è poi la tendenza, accentuatasi da G a P 
+                  (fondamentalmente rispecchiante G, ma già caratterizzata da significativi ritocchi 
+                  nella direzione di D N), a D N, a evitare la liquidità del verso, ora sopprimendo 
+                  la ripetizione di strutture similari, come ai vv. 1-3, dove la lezione: «I balsami odorati / 
+                  per te le grazie apprestino, / per te i lini beati» di G, viene rimossa a vantaggio di: «I
+                  balsami beati / per te le Grazie apprestino, / per te i lini odorati» di P D N, che
+                  oltre a razionalizzare i rapporti tra i «balsami» e i «lini», dissipa anche l’effetto di 
+                  meccanica corrività, conseguente all’immediata successione di due sinalefe; ora abolendo la forma apostrofata, 
+                  come al v. 23, dove il passaggio da «d’Ascra» di G a «di Ascra» di P è da attribuirsi alla volontà di non 
+                  incorrere, in clausola di strofe, nell’automatica ripetizione del modulo apostrofo-
+                  sinalefe (vv. 23-4: G «se Palla d’Ascra al fonte / toglie l’elmo alla fronte»),
+                  mai altrove attestato nelle due odi (e del resto presente una sola volta, e in
+                  forma non esattamente corrispondente, nella precedente produzione foscoliana, nell’ode 
+                  <emph>A Dante</emph> [1795-1796], 5-6, a p. 25: 
+                  <quote source="#Foscolo_Dante">
+                     <l>«che additano agl’ingegni</l> 
+                     <l>d’eterna gloria i segni»</l>
+                  </quote>), 
+                  o al v. 58 [52], dove l’eccezionale opposizione vocalica: «allo incalzato scalpito» di D N, 
+                  contro la forma apostrofata di G P, realizza una più evidente mimesi fonico-cinematica 
+                  del particolare della zampa del cavallo, dando inoltre corpo al precedente, ma nel tempo
+                  istantaneo, risonare degli «antri marini» (anche si noti la posizione rilevata,
+                  a inizio di verso, 59 [53], dell’oggetto di interesse principale, la forte pausa
+                  segnata dalla virgola, l’iterazione del suono gutturale di «incalzato» e
+                  «scalpito», doppiamente ribadito dal «che» relativo e dal verbo «caccia»),
+                  e marcando con maggiore decisione l’improvviso schizzare di polvere e
+                  sassi, relativo alla violenza dello scalpito, e però ancora afferente all’iniziale
+                  risonare, grazie all’attenuazione della gutturale nella palatale delle rime
+                  baciate («caccia-traccia»). Altrove il ritmo del verso è frenato ricorrendo
+                  all’accentuazione dell’iperbato, come ai vv. 40-1 [34-5], dove: «Perché
+                  emulasti, incauta, [P incauta!] / non dell’Aonie l’arte» di G P, diventa in
+                  D N: «Perché non dell’Aonie / seguivi, incauta, l’arte», o all’introduzione
+                  della congiunzione coordinante, come al v. 58 [52], dove: «piove il sudore,
+                  i crini» di G, diventa: «e il sudor piove, e i crini» di P D N, oppure devolvendo 
+                  una determinata figura retorica da funzioni impressionistiche a
+                  compiti descrittivi. È il caso dell’aposiopesi del v. 64 [58]: G «nuota, e 
+                  ingorde ... si gonfiano»; P D N «nuota ... e ingorde si gonfiano», o ancora
+                  valendosi dell’artificio della dieresi, come al v. 100 [94], dove: «mesto,
+                  oltraggiato, e pallido» di GP diventa: «silenzioso, e pallido» di DN. Tutto
+                  ciò inerisce a un diagramma espressivo che da G a P a D N tende a risolvere
+                  il primitivo impressionismo, vale a dire l’adesione a forme di chiara derivazione 
+                  melodrammatica, tipiche della tradizione settecentesca dell’ode,
+                  in una cifra stilistica classicamente descrittiva, di ascendenza pariniana.
+                  Tale il senso, oltre che della puntuale rimozione della liquidità del verso,
+                  delle più cospicue varianti di D N, sopra segnalate (vv. 19-30 [19-24], e
+                  49-54 [43-8]), così come della lezione «e respinse» di P D N in luogo di
+                  «ed atterri» di G al v. 71 [65], causativo e fisicamente inerente al «cenno
+                  onnipotente » del v. 72 [66], o della significativa caduta di segni diacritici
+                  propri alla prassi melodrammatica del «fra sé» (v. 74 [68]: G «e (orribile!)»,
+                  P D N «e, orribile!»), o, finalmente, della fusione in un unico periodo di
+                  proposizioni in origine giustapposte, come ai vv. 76-8 [70-2]: G «cade
+                  Pardon; tu [. . .] misera / su la petrosa riva / rotolavi mal viva . . .»; P
+                  «scosse Pardon; te misera / per la petrosa riva / strascinava mal viva»;
+                  D N «scuote Pardon, te misera / su la petrosa riva / strascinando mal viva».
+               </note>
+            </div>
+            <div type="metro">
+               ode: ab*sdr.ac*sdr.dd.
+            </div>
+            <div type="commento">
+               <noteGrp>
+                  <note target="#O1V1" targetEnd="#O1V15">
+                     1-15. <ref rend="bold">I balsami ... diva!</ref>: nota il Ferrari: «Questi versi, sino al punto
+                     esclamativo, nei quali il poeta chiede che le Grazie apprestino per la donna
+                     ammalata i balsami e i lini che porsero già a Citerea il giorno che si ferì
+                     mentre piangeva forsennata il morto Adone, e nei quali mostra gli Amori
+                     piangenti intorno al letto dall’ammalata, sono una derivazione, modificata
+                     dal Foscolo per la circostanza, dall'<bibl corresp="#Bione_Idillio">Idillio</bibl> di Bione “Canto funebre d’Adone".
+                     La favola è nota: Venere innamoratasi di Adone, e temendo per il suo caro
+                     la gelosia di altri dèi, lo prega di non andare a caccia che in sua compagnia;
+                     egli disubbidisce ed è ucciso da un cinghiale, che, per alcuni, non era che
+                     Marte così trasformatosi per punire i torti fattigli dalla dea: arrivata Venere 
+                     sul morente giovinetto piange e si dispera; poi morto, fa dal suo sangue 
+                     crescere il fiore Anemone». 
+                  </note>
+                  <note target="#O1V1">
+                     1. <ref rend="bold">I balsami beati</ref>: i medicamenti beatificanti, che rendono la salute. 
+                     Nota il Ferrari: «Il Foscolo comincia sùbito, volendo raffrontare la sua donna 
+                     ammalata ad una dea, col ricordo di Venere ferita. Non per la comparazione, che è 
+                     sua, ma per la descrizione della ferita di Venere, egli attinge, come si è detto, 
+                     particolari e si serve dei colori dell’<bibl corresp="#Bione_Idillio">idillio</bibl> di Bione, modificato al suo bisogno; 
+                     poiché la ferita di Venere che nel poeta greco non è che accessoria, qui diventa il punto
+                     principale; ed il poeta italiano ponendo che ella fosse poi curata dalle Grazie, 
+                     aggiunge una circostanza che si può bene sottintendere in Bione, ma
+                     che per altro non è espressa, dacché là non importava. Così i balsami, e i
+                     lini profumati (e le vesti ancóra) là sono offerti per ungere e comporre il
+                     morto Adone, e sono pôrti alla dea dagli Amori; qui invece per curare
+                     Venere stessa, e dalle Grazie»; e vedi <emph>Le Rimembranze</emph>, 7-8, a p. 115:
+                     <quote source="#Foscolo_Rimembranze">
+                        <l>«Quest’è la pianta che le diè i beati</l> 
+                        <l>fior ch’ella colse [...]»</l>
+                     </quote>. 
+                  </note>
+                  <note target="#O1V2">
+                     2. <ref rend="bold">le Grazie</ref>: Aglaia, Eufrosine, Talia, con gli Amori parte del corteggio di Venere.
+                  </note>
+                  <note targte="#O1V3">
+                     3. <ref>i lini odorati</ref>: le bende profumate (dai balsami). Il latinismo è anche nei
+                     <emph>Sepolcri</emph>, 39, a p. 298: <quote source="#Foscolo_Sepolcri">«e di fiori odorata arbore amica»</quote>. 
+                  </note>
+                  <note>
+                     4. <ref rend="bold">Citerea</ref>: 
+                     Venere, così detta per essere da prima approdata, dopo la nascita dalla spuma marina,
+                     nell’isola di Citèra (l’attuale Cerigo, situata sotto il Peloponneso). Vedi 
+                     <emph>Le Grazie</emph>, I, 36-7, alle pp. 411-2: 
+                     <quote source="#Foscolo_Grazie">
+                        «[...] e più le giova 
+                        l’inno che bella Citerea la invoca»;
+                     </quote> 
+                     <ref>porgeano</ref>: le Grazie. 
+                  </note>
+                  <note target="#O1V5">
+                      5. <ref>profano spino</ref>: empio, in quanto aveva ferito una dea.
+                  </note>
+                  <note target="#O1V7" targetEnd="#O1V12">
+                     7-12. <ref rend="bold">quel dì ... giovinetto</ref>: nota il Ferrari: «Bione (traduz. Pagnini):
+                     <quote source="#Bione_Idillio">
+                        <l>"Vener sparsa le chiome, afflitta, incolta</l>
+                        <l>e scalza va per le foreste errando.</l> 
+                        <l>I rovi le tormentano le piante</l> 
+                        <l>e predan l’almo sangue. Ella mettendo</l> 
+                        <l>acute stride va per lunghe valli,</l> 
+                        <l>e l'assirio suo sposo e garzón chiama”</l> [. . .]
+                     </quote>. 
+                     Per commuovere maggiormente il cuore, commozione che poi
+                     di conseguenza si trasporta ancóra alla donna ammalata, il Foscolo si
+                     ferma sulle dimostrazioni più affettuose del dolore di Venere. Bione:
+                     <quote source="#Bione_Idillio">
+                        <l>“. . .Adone intanto</l> 
+                        <l>non sente più com’ella morto il bacia”.</l>
+                     </quote>
+                      Il Parini nel <emph>Dono</emph>, ma riferendosi ad una pittura (e la pittura non può fermare che un
+                     momento), descrive l’atteggiamento di Venere sopra Adone: 
+                     <quote source="#Parini_Dono">
+                        “Ma sovra lui se pendere 
+                        la madre de gli Amori 
+                        cingendol con le rosee 
+                        braccia si vede . . . [vv. 43-6]». 
+                     </quote>
+                     Venere piangente Adone è descritta da Ovidio, <emph>Metam</emph>., X, 720-7: 
+                     <quote source="#Ovidio_Metamorfosi">
+                        <l>«[...] Utque aethere vidit ab alto</l>
+                        <l>exanimem inque suo iactantem sanguine corpus,</l> 
+                        <l>desiluit pariterque sinum pariterque capillos</l> 
+                        <l>upit et indignis percussit pectora palmis.</l> 
+                        <l>Questaque cum fatis: “Et non tamen omnia vestri</l> 
+                        <l>iuris erunt” dixit “luctus monimenta manebunt</l>  
+                        <l>semper, Adoni, mei repetitaque mortis imago</l>
+                        <l>annua plangoris peraget simulanima nostri”»</l>
+                     </quote>, 
+                     e Properzio, II, 13, 53-6: 
+                     <quote source="#Properzio_Elegie">
+                        <l>«Testis, cui niveum quondam percussit Adonem</l> 
+                        <l>venantem Idalio vertice durus aper;</l>
+                        <l>illis formosum iacuisse paludibus, illuc</l> 
+                        <l>diceris effusa tu, Venus, isse coma».</l>
+                     </quote> 
+                  </note>
+                  <note target="#O1V7">
+                  <ref rend="bold">insana</ref>: fuori di sé, forsennata. «Cfr. Dante, cit. Guglielmo 
+                  Padovan <bibl corresp="#Dante_Inferno">Inf</bibl>. xxx 4; e il Petrarca son. _Il figliuol di Latona_ ecc.
+                  [XLIII] Mostrossi a noi qual uom per doglia insano, / che molto amata
+                  cosa non ritrovo » (Ferrari). E vedi anche Virgilio, Aen., IV, 8: «cum sic
+                  unanimam adloquitur male sana [Didone] sororem» (Antognoni). 
+               </note>
+               <note target="#O1V8">
+                  8. <ref rend="bold">il sacro Ida</ref>: monte nell’isola di Creta (l’attuale Psiloriti), 
+                  sacro perché vi nacque Giove. E vedi <bibl corresp="#Properzio_Elegie">Properzio</bibl>, citato in nota ai vv. 7-12; e <emph>Le Grazie</emph>,
+                  I, 245, a p. 426: <quote source="#Foscolo_Grazie">«dell’Ida irriguo di sorgenti [...]»</quote>. Giorgio Pasquali ha però
+                  giustamente obiettato che «[. . .] l’Ida non è né il Parnaso né l’Elicona,
+                  e con le Muse ha tanto poco che fare quanto col sole. Da Ida si formerebbe
+                  un aggettivo etnico <emph>Ideo</emph> e non <emph>Idalio</emph>. Idalio è una città di Cipro famosa
+                  per un santuario di Venere. La prima menzione è nelle Siracusane di Teocrito. 
+                  Ma da Catullo in giù essa è nominata, sempre in connessione con
+                  Venere, in moltissimi luoghi dei poeti classici latini: Virgilio, Properzio,
+                  Ovidio, Lucano, Valerio Fiacco, Stazio eco. eoe. [...] Questi [Foscolo],
+                  che nella giovanile poesia <emph>A Venere</emph> del 1794 aveva derivato pari pari dai
+                  poeti latini Diva Idalia (v. 37 sgg.: 
+                  <quote source="#Foscolo_Venere">
+                     <l>“Ah no! tu Diva Idalia</l> 
+                     <l>che in ogni dove imperi...”</l>
+                  </quote>), sei anni più tardi, nella bellissima ode <bibl corresp="#Foscolo_OII">A Luigia Pallavicini</bibl>
+                  mostra, nonostante il sostantivo vergiliano <emph>Idalio</emph>, che pure conosceva di sicuro, 
+                  di fraintendere l’aggettivo <emph>Idalio</emph>, riferendolo all’Ida.
+                  Che l’Ida non sia una semplice distrazione mostra chiaro una variante 
+                  “gl’idei monti di gemiti”. Come l’equivoco potesse avvenire, si spiega facilmente 
+                  se si confronta il suo modello, Properzio II, 13, 53-54.
+                  <quote source="#Properzio_Elegie">
+                     <l>Testis qui niveum quondam percussit Adonem</l> 
+                     <l>venantem Idalio vertice durus aper.</l>
+                  </quote> 
+                  Il <emph>vertex</emph> lo ha fatto pensare a un monte, e il resto vien
+                  da sé. Convien dire che nessun’altra fonte parla di Idalio quale città
+                  montuosa, seppure la carta (in Pauly-Wissowa, <emph>Real-Encyklopedie</emph> IX,
+                  869-70) mostri che il santuario celebre sorgeva su una delle due acropoli 
+                  della città, e seppure sia facile congetturare che Properzio, avesse o
+                  no chiara cognizione della topografia di Idalio, dovesse quasi inevitabilmente, 
+                  guidato dalle mille analogie, collocare in alto il tempio, l’errore è a ogni modo 
+                  indubbio. Adone non ha nulla da spartire né coll’Ida
+                  cretese, né con quello frigio: egli è invece secondo la tradizione prevalente
+                  ciprioto, figlio del re Cinira. Strano che il Foscolo non si sia ricordato di
+                  un altro passo di Properzio (IV, 6, 59) dove la Stella Idalia è l’astro di
+                  Cesare, è chiaramente Venere: 
+                  <quote source="#Properzio_Elegie">
+                     <l>At pater Idalio miratur Caesar ab astro</l>
+                  </quote>
+                  (G. Pasquali, <emph>Stella idalia e stella d’Italia</emph>, in «Lingua Nostra», in, 1941,
+                  fase. 3, p. 55). E vedi anche Marino, <emph>Adone</emph>, III, 69, 3-4: 
+                  <quote source="#Marino_Adone">
+                     <l>«stanco di saettar [Adone] posa talvolta</l> 
+                     <l>su l’Idalio frondoso, o in val di Gnido»;</l>
+                  </quote>
+                  IV, 20, 1-2: 
+                  <quote source="#Marino_Adone">
+                     <l>«Lassa, son pur colei, che ottenni in Ida</l> 
+                     <l>titolo di beltà sovra le belle».</l>
+                  </quote> 
+               </note>
+               <note target="#O1V11">
+                  11. <ref rend="bold">sanguinoso petto</ref>: nota il Ferrari : «rende con brevissima
+                  locuzione questi passi di Bione: 
+                  <quote source="#Bione_Idillio">
+                     <l>“Su i monti giace il vago Adon da un dente,</l> 
+                     <l>candido dente, il suo candido fianco</l> 
+                     <l>trafitto, e un respir languido movendo</l> 
+                     <l>ange Ciprigna. Un nero sangue irriga</l> 
+                     <l>le sue carni di neve ...”</l> 
+                  </quote>
+                  e più sotto: 
+                  <quote source="#Bione_Idillio">
+                     <l>“Ma l’atro sangue intorno all’umbilico</l> 
+                     <l>d’Adone alto s’ammassa, e giù da’ fianchi</l> 
+                     <l>sul petto porporeggia, e son le coste,</l> 
+                     <l>che parean dianzi neve, a rosso tinte”».</l>
+                  </quote>
+               </note>
+               <not target="#O1V12">
+                  12. <ref rend="bold">ciprio giovinetto</ref>. Adone, figlio di Mirra e di suo padre Cinira, re di Cipro (
+                  «secondo alcuni, seguiti
+                  dal Foscolo, Cinira era re di Cipro e d’Arabia; secondo altri, seguiti da
+                  Bione, di Assiria», Ferrari). 
+               </note>
+               <note target="#O1V13">
+                  13. <ref rend="bold">Or ... amori</ref>: nota il Ferrari: «in Bione: 
+                  <quote source="#Bione_Idillio">
+                     <l>“Sieguon gli amori a lagrimar Ciprigna”</l>
+                  </quote>. 
+                  Il Foscolo vuol suggerire che come gli Amori piansero Venere il giorno che si ferì, così oggi piangono 
+                  la Pallavicini, nuova dea, che è ammalata»; 
+                  <ref rend="bold">amori</ref>: « gli spiriti amanti e gentili» (De Robertis), i quali «piangono la 
+                  malattia della donna, e innalzano preci perché l’arte medica valga a guarirla» (Ferrari). 
+               </note>
+               <note target="#O1V14" targetEnd="#O1V15">
+                  14-5. <ref rend="bold">te...diva</ref>: vedi nell’<emph>>Omaggio</emph>, Ceroni, <emph>Sciolti</emph>, 
+                  9-10: 
+                  <quote source="#Ceroni_Omaggio">
+                     <l>«Più leggiadra di Venere ti mostra</l> 
+                     <l>in tua diva beltà [. . .]»;</l>
+                  </quote> 
+                  Gasparinetti, <emph>Ode</emph>, 99-100: 
+                  <quote source="#Gasparinetti_Ode">
+                     <l>«Sì paghe siete, o Liguri</l>
+                     <l>dive [. . .]»</l>
+                  </quote>; fra le dive è poi l’omerico δῖα θεάων, II.,
+                  VI, 305 (Grancelli). 
+               </note>
+               <note target="#O1V15" targetEnd="#O1V18">
+                  15-8. <ref rend="bold">e...Latona</ref>: e recano fiori (da intendersi,
+                  probabilmente, in senso metaforico, per poesie augurali), onde ottenere
+                  la tua salute (<emph>votivi</emph>), all’altare da cui (<emph>d’onde</emph>) si ode il suono del grande
+                  arco (nell’attimo in cui è liberata la freccia) di Apollo (figlio di Giove e di
+                  Latona). Come tale, Apollo è già designato in Petrarca, Rime, XLIII, I:
+                  <quote source="#Petrarca_Canzoniere">
+                     «Il figliuol di Latona [. . .]»
+                  </quote>; 
+                  <ref rend="bold">suona</ref>: in rima con <emph>Latona</emph> è in Cerretti,
+                  I, <bibl corresp="#Cerretti_Nozze">Per le nozze della Buonvisi, lucchese</bibl>, 5-6.
+               </note>
+               <note target="#O1V19" targetEnd="O1V30">
+                  <ref rend="bold">E te...dell'onda</ref>: nota il Ferrari: «Descrive la bella donna mentre
+                  ballando riceveva gentile impedimento dalle chiome, le quali non essendo raccolte 
+                  nel capo, ma sciolte, venivano, essendo lunghe, a ricascare sul
+                  braccio; ed il braccio allargandosi nel gesto per l’atteggiamento della danza,
+                  le sosteneva. L’imagine principale su cui il poeta si vuol fermare è appunto questa del braccio che allargato in giro alzava le chiome, e questa
+                  gli suggerisce la comparazione con Pallade che tien fuori dall’onde i 
+                  capelli: l’altra idea che le chiome erano sciolte (necessità perché potesse aver
+                  luogo l’imagine principale) è data come secondaria, poiché essa presuppone 
+                  la prima, e trova pure il suo corrispondente nella comparazione.
+                  L’imagine principale è certamente del Foscolo, ma il raffrontare donna
+                  colle chiome sciolte a Pallade, è, come il Carrer (op. cit. p. lix) osservò
+                  giustamente, prima nel Parini <emph>Per Cecilia Tron</emph>, 41: 
+                  <quote source="#Parini_Tron">
+                     <l>“Parve a mirar nel vólto</l> 
+                     <l>e ne le membra Pallade,</l> 
+                     <l>quando l’elmo a sé tolto,</l> 
+                     <l>fin sopra il fianco scorrere si lascia il lungo crin”</l>
+                  </quote>
+                  . Dire come fa Giovanni Mestica,  che il Foscolo non imitasse il Parini, ma che questi gli servisse solo 
+                  di strada per ritornare alla fonte greca (ciò è a Callimaco l’inno 
+                  <bibl corresp="#Callimaco_Pallade">A Pallade</bibl>)
+                  alla quale pure aveva attinto il poeta lombardo, a me non par giusto.
+                  Perché la trovata del Parini, sta nella comparazione, e nella comparazione
+                  l’imitazione del Foscolo; il che è confermato a mio credere dalla lez. var.
+                  Ecco i versi di Callimaco (traduz. Pagnini): 
+                  <quote source="#Callimaco_Pallade">
+                     <l>“... Argo oggi a’ fonti bea</l> 
+                     <l>e non a’ fiumi.</l> 
+                     <l>[...]<</l> 
+                     <l>Misto di fiori e d’oro</l> 
+                     <l>Inaco giù verrà da’ poggi erbosi</l> 
+                     <l>menando d’acque un bel lavacro a Palla”</l>
+                  </quote>: e più sotto è descritta
+                  la dea che si bagna nel fonte Eliconio. Come si vede, al Parini il poeta
+                  greco non servì che di notizia per i lavacri di Palla. È vero per altro che
+                  pure il Foscolo si servì del poeta greco, ma solo in un accessorio, nella
+                  descrizione ciò è del luogo che serviva di lavacro; e tanto è ancora confermato 
+                  dalla varietà della lezione al v. 26». Che in G e in P i vv. 19-24 si
+                  rifacciano ai vv. 41-5 del <bibl corresp="#Parini_Pericolo">Pericolo</bibl> non par dubbio, tanto quanto 
+                  il fatto
+                  che in D e in N i vv. 25-30 tengano direttamente conto anche della fonte
+                  callimachea, di cui è del resto traccia nei versi del frammento delle <emph>Grazie</emph>,
+                  contenuto nella Considerazione XII, <emph>Chiome bionde</emph>, della <bibl corresp="#Foscolo_Chioma">
+                  Chioma di Berenice</bibl>, 
+                  cit., pp. 209-10. Su tutto ciò vedi la nota introduttiva all’ode, qui alle
+                  pp. 172-3. Si segnala inoltre che l’ode pariniana, primamente pubblicata nel
+                  «Giornale poetico» di Andrea Rubbi, Venezia, Marcuzzi, primo semestre
+                  1789, vedeva nuovamente la luce nell’«Anno poetico, ossia Raccolta annuale di 
+                  poesie inedite di autori viventi», II, Venezia, Dalla Tipografia
+                  Pepoliana, 1794, di Angelo Dalmistro. 
+               </note>
+               <note target="#O1V19">
+                  <ref rend="bold">
+                     E te: 
+                  </ref>
+                  «Risponde a <emph>Or te</emph> del v. 13. E anche le due strofe si corrispondono: 
+                  nell'una i pianti e i voti di tutti gli spiriti innamorati, nell’altra il pungente desiderio 
+                  della donna di tornare alle feste di una volta » (De Robertis). 
+               </note>
+               <note target="#O1V20" targetEnd="O1V21">
+                  <ref rend="bold">20-1. ove Paure . . . fragranza</ref>: vedi a p. 233 il sonetto 
+                  <bibl corresp="#Foscolo_SVIII">E tu ne’ carmi avrai perenne vita</bibl>, 13-4,
+                  e la nota al v. 14.
+               </note>
+               <note target="#O1V22">
+                  <ref rend="bold">a’ nodi indocile</ref>: ribelle all’acconciatura, cioè sciolta; nota il De 
+                  Robertis: «Nell’ode <emph>All’amica risanata</emph>, v. 46, dirà 
+                  <quote source="#Foscolo_OII">mal fide</quote>, che vuol dire dunque non malamente affidate, ma
+                  infide o, come qui, ribelli». 
+               </note>
+               <note target="#O1V25" targetEnd="#O1V30">
+                  <ref rend="bold">Tal. . . dell’onda</ref>, così (<emph>tal</emph>), immersa nell’acqua (<emph>
+                  lavacro</emph>), che cadendo dal colle (<emph>clivo</emph>) inachio (da cui, nella direzione 
+                  della città di Argo, scende il fiume Inaco), porta seco i fiori che raccoglie lungo il suo corso, 
+                  Pallade regge (<emph>contien</emph>) fuori dell’onda
+                  le chiome libere dall’elmo. Il passo ha relazione con i versi dell’inno <bibl corresp="
+                  #Callimaco_Pallade ">A Pallade</bibl> di Callimaco, citato in nota ai vv. 19-30, e con il frammento 
+                  delle Grazie, contenuto nella <bibl corresp="#Foscolo_Chioma">Chioma di Berenice</bibl>, per il quale 
+                  vedi la nota ai vv. 19-30. E vedi <emph>Le Grazie</emph>, III, 55-6, a p. 466: 
+                  <quote source="#Foscolo_Grazie">
+                     <l>«[. . .] i fulvi</l> 
+                     <l>capei di Palla, liberi dell’elmo»</l>
+                  </quote>. 
+                  Per <emph>lavacro</emph> vedi <emph>Sepolcri</emph>, 166-7, alle pp. 313-
+                  4: 
+                  <quote source="#Foscolo_Sepolcri">
+                     <l>«[...] e pe’ lavacri</l> 
+                     <l>che da’ suoi gioghi a te versa Apennino!»</l>
+                  </quote>;
+                  per _<emph>Palla</emph> vedi <bibl corresp="#Foscolo_Liberatore">Bonaparte liberatore</bibl>, 31. 
+               </note>
+               <note target="#O1V31" targetEnd="#O1V36">
+                  31-36. <ref>Armoniosi...baci</ref>. «Vuol dire che dagli occhi della Pallavicini tralucevano, 
+                  apparivano, espressioni di sdegno o di pace, cioè atteggiamenti e moti sdegnosi o 
+                  tranquilli: e espressioni, moti, atteggiamenti che o inducevano a sperare, o erano 
+                  causa di pianto, o svegliavano desideri di baci» (De Robertis). Nota il Ferrari: 
+                  «Mostra che dagli occhi della Pallavicini apparivano tutti i fascini e le arti con che Venere 
+                  soleva allettare gli uomini. Esiodo nella <emph>Teogonia</emph> (traduz. G. R. Carli): 
+                  <quote source="#Esiodo_Teogonia">
+                     <l>“Ella ha d’intorno</l> 
+                     <l>verginee parolette, e risi e inganni,</l> 
+                     <l>e lusinghe soavi e amori e vezzi”.</l> 
+                  </quote>
+                  E confronta ancóra il cinto di Venere in Omero, <bibl corresp="#Omero_Iliade">Iliade</bibl> XIV 259
+                  (trad. Monti), dove Venere dà il cinto a Giunone per stringere fra i suoi
+                  vezzi Giove, imitato poi dal Tasso, - da cui qui il Foscolo ha tolto qualche
+                  tocco - nel cinto d’Armida, <emph>Liberata</emph>, XVI 25: 
+                  <quote source="#Tasso_Liberata">
+                     <l>“Teneri sdegni e placide e tranquille</l> 
+                     <l>repulse, e cari sdegni, e liete paci,</l> 
+                     <l>sorrise parolette, e dolci stille</l> 
+                     <l>di pianto, e sospir tronchi e molli baci. . .”.</l>
+                  </quote> 
+                  E secondo le teorie del
+                  Foscolo, si può credere, che il ricordo che i pregi della donna erano simili
+                  a quelli di una dea, rendesse detti pregi più cari e più preziosi, e più venerati 
+                  quasi, agli uomini, o, se non ad altri, a lui. (Cfr. <emph>Chioma di Berenice</emph>,
+                  Disc. 4, ove a proposito della descrizione della sera fatta da Stesicoro,
+                  avverte <quote source="#Foscolo_Chioma">“La qual dipintura più agevolmente le virtù domestiche 
+                  persuadeva, 
+                  che ei le vedevano sì care al ministro maggior della natura”)</quote>». 
+                  Nell’<emph>Omaggio</emph> così si esprimeva il Ceroni, <emph>Inno</emph>, 52-7: 
+                  <quote source="#Ceroni_Omaggio">
+                     <l>«Colei che cinta di candor celeste</l> 
+                     <l>emulava in beltà la Cipria Dea;</l> 
+                     <l>che serenar i nembi, e le tempeste</l> 
+                     <l>del ciglio colle folgori potea,</l> 
+                     <l>anzi stagione or varcherà le meste</l> 
+                     <l>nebbie della palude Acherontea?».</l>
+                  </quote> 
+               </note>
+               <note target="#O1V39">
+                  39. <ref rend="bold">studii</ref>:, vedi Parini, <emph>Il messaggio</emph>, 69: 
+                  <quote source="#Parini_Messaggio">
+                     «e i geniali studii»
+                  </quote>; <emph>A Silvia</emph>, 
+                  53-5: 
+                  <quote source="#Parini_Silvia">
+                     «poi che la spola e il Frigio 
+                     ago e gli studii cari 
+                     mal si recaro a tedio» 
+                  </quote>
+                  (entrambe le odi furono probabilmente note al Foscolo attraverso la stampa dell’«Anno poetico» 
+                  ecc. del 1795). E vedi anche <emph>II Mattino</emph>, 24: 
+                  <quote source="#Parini_Mattino">
+                     <l>«Né i mesti de la dea Pallade studii»</l>
+                  </quote>. 
+               </note>
+               <note target="#O1V40" targetEnd="#O1V41">
+                  40-41. <ref rend="bold">dell’Aonie ... l’arte</ref>: le varie discipline delle
+                  Muse, deità preposte alle belle arti e alle scienze (<emph>Aonie</emph>, secondo consueta
+                  locuzione poetica, dai monti Aonii della Beozia); e vedi il sonetto <bibl corresp="#Foscolo_SXI">Pur
+                  tu copia versavi alma di canto</bibl>, 2, a p. 244. 
+               </note>
+               <note target="#O1V42">
+                  42. <ref rend="bold">i ludi...Marte</ref>: «<emph>ludi</emph> è voce lat. che vale giuochi; qui 
+                  esercizi. 
+                  Il Poliziano <emph>Stanze</emph> 1 1: 
+                  <quote source="#Poliziano_Stanze">
+                     “Le magnanime pompe e i fieri ludi”
+                  </quote>; ove è pure aggiunto 
+                  l’epiteto fieri a ludi volendo che determinassero esercizi di guerra (per lui 
+                  erano le giostre); ma il Foscolo l’adoperò poi senza aggettivo nella traduz. dell’_Iliade_ “Ma dai
+                  ludi di Marte ecc.”. In fine, la locuzione foscoliana risponde al _formidabil
+                  gioco di Marte_ del Lamberti [. . .] », per il quale vedi la nota ai vv. 43-78
+                  (Ferrari). 
+               </note>
+               <note target="#O1V43" targetEnd="#O1V78">
+                  43-78. <ref rend="bold">Invan...mal viva</ref>: come già segnalò G. Carducci, in
+                  <emph>Lirici del secolo XVIII</emph>, cit., p. LXXXIX, l’ode foscoliana, relativamente
+                  all’invenzione, deriva da <emph>I cocchi di Luigi Lamberti</emph>. Il modello lambertiano 
+                  sembra tuttavia circoscrivibile ai vv. 33-72: 
+                  <quote source="#Lamberti_Cocchi">
+                     <l>«Sventurato fanciullo!</l> 
+                     <l>A lui che valse il formidabil gioco</l>
+                     <l>fuggir di Marte, e nullo</l> 
+                     <l>pagar tributo di Ciprigna al foco;</l> 
+                     <l>se poscia in onta de l’Ortigia Diva,</l> 
+                     <l>su la Trezenia riva,</l> 
+                     <l>l’estinse, ammenda ai non commessi falli,</l> 
+                     <l>l’ira de’ suoi cavalli.</l> 
+                     <l>Sedea su altero cocchio</l> 
+                     <l>in atti il giovin, dolcemente acerbi,</l> 
+                     <l>e con le mani, e l’occhio</l> 
+                     <l>vegliava al fren dei corridor superbi;</l> 
+                     <l>quando dal grembo dei mugghianti flutti,</l>  
+                     <l>ecco su i lidi asciutti,</l> 
+                     <l>di ver la raceunifera Epidauro</l> 
+                     <l>balzar mostroso tauro;</l>
+                     <l>a lo spettacol diro,</l> 
+                     <l>rinculato i cornipedi feroci,</l> 
+                     <l>né più il flagel sentiro,</l> 
+                     <l>o il noto suon de le animose voci;</l> 
+                     <l>quindi sbattendo i rabbuffati colli,</l> 
+                     <l>per la gran tema folli,</l>
+                     <l>si disserrar, forzando e briglie e morso,</l> 
+                     <l>precipitosi al corso.</l> 
+                     <l>Come fischiando  scoppia,</l> 
+                     <l>e fugge pietra da aggirata fionda,</l> 
+                     <l>corse l’equina coppia</l> 
+                     <l>a dritta e  a manca per la curva sponda,</l>
+                     <l>insin che a l’urto de gli acuti sassi,</l> 
+                     <l>rote, timone, ed assi,</l> 
+                     <l>si scommesser crocchiando, e in cento parti,</l> 
+                     <l>volar troncati, e sparti.</l> 
+                     <l>Te fra le briglie avvolto,</l> 
+                     <l>Ippolito traean pei scabri liti,</l> 
+                     <l>indarno a pregar volto,</l>
+                     <l>i rei destrieri di tua man nutriti;</l> 
+                     <l>così, qual giglio in su 'l fiorir reciso,</l> 
+                     <l>isti acerbo a l’Eliso,</l> 
+                     <l>ed ei, che mal sul Pegaso si tenne,</l> 
+                     <l>ad incontrar ti venne»</l>
+                  </quote>. La “caduta” è
+                  così deprecata e descritta nell’<emph>Omaggio</emph>: Ceroni, <emph>Sciolti</emph>, 37-53: 
+                  <quote source="#Ceroni_Omaggio">
+                     <l>«Oh fatale destrier, dal sen di Averno</l> 
+                     <l>chi ti spinse alla luce ? i molli vezzi,</l> 
+                     <l>per te, a lutto vestir, per te, gli Amori</l> 
+                     <l>l’arco gittaro, e l’Acidalio mirto</l> 
+                     <l>di pallido color tinse le fronde.</l> 
+                     <l>Tu al dì scoppiasti tra le ircane belve,</l>
+                     <l>o dai cavalli barbari scendesti,</l> 
+                     <l>che d’uman sangue abbeverava il truce</l>  
+                     <l>lestrigonio monarca; oh! almen la sorte</l> 
+                     <l>avessi tu de’ Fetonte! corsieri!</l> 
+                     <l>O in te la lancia tridentata, il fero</l> 
+                     <l>Dio dell’onde scagliasse, o fra le balze</l> 
+                     <l>piombassi infranto e lacero, onde invidia</l> 
+                     <l>alla coppia d’Ippolito infelice</l> 
+                     <l>nella morte portassi, empio, che tanto</l> 
+                     <l>osasti contro le divine forme</l> 
+                     <l>della Ligure bella [...]»</l>
+                  </quote>; <emph>Inno</emph>, 22-51: 
+                  <quote source="#Ceroni_Inno">
+                     <l>«Oimè, che scalpita</l> 
+                     <l>con ugna ardente,</l> 
+                     <l>oimè, che palpita</l> 
+                     <l>impaziente</l> 
+                     <l>il crine ondivago</l> 
+                     <l>quassando altier</l> 
+                     <l>del freno indocile</l> 
+                     <l>il superbo indomabile corsier.</l> 
+                     <l>Col lieve incarco nitrisce, avvampa,</l> 
+                     <l>sbrigliato stampa - l'orme fugaci,</l> 
+                     <l>l'aure seguaci -</l> 
+                     <l>vince nel corso</l> 
+                     <l>infranto il morso - sbuffa, ed infuria:</l> 
+                     <l>ché iniqua furia - l’urta, e flagella:</l> 
+                     <l>pave la bella, - né la sua voce</l> 
+                     <l>frena il feroce; - tale il baleno</l> 
+                     <l>dei nembi in seno, - o tuon che mugge</l> 
+                     <l>rapido fugge - Ahi ! tra gli alpestri</l> 
+                     <l>scogli di Sestri - su dura cote</l> 
+                     <l>strazia, e percote - il bel sembiante,</l> 
+                     <l>che amore amante - facea; già esangue</l> 
+                     <l>tra un rio di sangue - pallida cade,</l> 
+                     <l>e gel di morte i vaghi membri invade.</l> 
+                     <l>Trema il corpo rinverso in sulla sabbia;</l> 
+                     <l>sul seno il capo languido s’inchina;</l> 
+                     <l>sono sangue i capei, sangue le labbia;</l> 
+                     <l>sangue la tonda guancia alabastrina.</l> 
+                     <l>Geme querulo il zefiro, e par n’abbia</l> 
+                     <l>dolor, la impietosita onda marina,</l> 
+                     <l>le grazie desolate al piè le stanno,</l> 
+                     <l>mostrando agli atti angoscioso affanno»</l>
+                  </quote>;
+                  Gasparinetti, <emph>Ode</emph>, 29-84: 
+                  <quote source="#Gasparinetti_Ode">
+                     <l>«Miri novella Amazzone,</l> 
+                     <l>con la temuta voce,</l> 
+                     <l>Luigia il freno reggere</l> 
+                     <l>a corridor veloce,</l> 
+                     <l>e con nobil fierezza</l> 
+                     <l>sfidar l'aure, e i pericoli,</l> 
+                     <l>alle vittorie avvezza.</l> 
+                     <l>Adatta il molle, ed agile</l> 
+                     <l>fianco ad anglica sella,</l> 
+                     <l>il manco piede argentea</l> 
+                     <l>staffa accoglie, e appuntella,</l> 
+                     <l>l’altro in guisa si stende,</l> 
+                     <l>che, al desir involandosi,</l> 
+                     <l>mille desiri accende.</l> 
+                     <l>La chioma leggiadrissima,</l> 
+                     <l>che in lievi guizzi ondeggia,</l> 
+                     <l>il liscio collo e l’omero</l> 
+                     <l>dolce lambe, e vezzeggia;</l> 
+                     <l>e il vento, che la tocca,</l> 
+                     <l>gemendo il voi sollecita,</l>
+                     <l>per baciar quella bocca.</l> 
+                     <l>Bella bocca nettarea,</l> 
+                     <l>che in larga copia tersa</l>
+                     <l>gentil favella amabile</l>
+                     <l>soavemente versa,</l> 
+                     <l>che impietosir i venti</l> 
+                     <l>puote non sol, ma sudditi</l> 
+                     <l>farsi in terra viventi.</l> 
+                     <l>Candido lino indocile</l> 
+                     <l>spietatamente casto,</l>
+                     <l>fa del suo petto ai palpiti</l> 
+                     <l>baldanzosi contrasto;</l> 
+                     <l>ma invan, che il lusinghiero</l> 
+                     <l>candor negato, penetra</l> 
+                     <l>temerario il pensiero.</l> 
+                     <l>Ma, qual balen, che celere</l> 
+                     <l>fa in aria un solco, e fugge,</l> 
+                     <l>tal ella passa, e involasi</l> 
+                     <l>a chi in fiamme si strugge;</l> 
+                     <l>e con mal certo sguardo</l> 
+                     <l>misura l'orme rapide</l> 
+                     <l>del destriero gagliardo.</l> 
+                     <l>Ah! veglia, Amor, tu tenero</l> 
+                     <l>custode delle Belle,</l> 
+                     <l>veglia al suo fianco, e l’abbiano</l> 
+                     <l>teco in cura le stelle,</l> 
+                     <l>potria, del male figlio,</l> 
+                     <l>segreto invido Genio,</l> 
+                     <l>nuovo aprirle periglio.</l> 
+                     <l>Al suo cader precipite</l> 
+                     <l>potria Luigia, e fero</l> 
+                     <l>miserando spettacol</l> 
+                     <l>offrir al passeggero,</l> 
+                     <l>che, qual giglio reciso,</l> 
+                     <l>scorgerebbe fra spasimi</l> 
+                     <l>scolorarsi il bel viso»</l>.
+                  </quote> 
+                  La descrizione
+                  del cavallo imbizzarrito ha poi attinenza con Virgilio, <emph>Aen</emph>., XI, 492-7:
+                  <quote source="#Virgilio_Eneide">
+                     <l>«Qualis, ubi abruptis fugit praesepia vinclis</l> 
+                     <l>tandem liber ecus campoque potitus aperto</l> 
+                     <l>aut ille in pastus armentaque tendit equarum</l> 
+                     <l>aut adsuetus aquae perfundi flumine noto</l> 
+                     <l>emicat arrectisque fremit cervicibus alte</l> 
+                     <l>luxurians luduntque iubae per colla, per armos».</l>
+                  </quote> 
+               </note>
+               <note target="#O1V43">
+                  43. <ref rend="bold">presaghi</ref>: della sventura. «Il F. poteva aver presenti i virgiliani esempi di 
+                  <quote source="#Virgilio_Eneide">
+                     praesagi fulminis ignes, praesaga mali mens
+                  </quote>» (Antognoni).
+               </note>
+               <note target="#O1V46">
+                  46. <ref rend="bold">alipede</ref>:, «sta per cavallo che corre velocissimo, quasi abbia le ali ai
+                  piedi [...]. Monti <emph>Pel Signor di Montgolfier</emph>, 15: 
+                  <quote source="#Monti_Mongolfier">
+                     <l>“Nettuno ai verdi alipedi</l> 
+                     <l>lasciò cader la briglia”»</l>
+                  </quote> (Ferrari). E vedi anche Virgilio, 
+                  <bibl corresp="#Virgilio_Eneide">
+                     Aen.,VII, 277; XII, 484.
+                  </bibl> 
+               </note>
+               <note target="#O1V47">
+                  47. <ref rend="bold">ed irritante il morso</ref>: ed anzi il morso irritante.
+               </note>
+               <note target="#O1V50" targetEnd="#O1V51">
+                  50-1. <ref>l'ardua / testa</ref>: la testa sollevata in alto. Si attaglia meglio della
+                  lezione di G P («il capo s’agita») all’originale virgiliano (<emph>Aen</emph>., XI, 496-7):
+                  <quote source="#Virgilio_Eneide">
+                     <l>«[...] arrectisque fremit cervicibus alte</l> 
+                     <l>luxurians luduntque iubae per colla, per armos».</l>
+                  </quote>
+               </note>
+               <note target="#O1V52">
+                  52. <ref rend="bold">ed i manti volubili</ref>: i manti (della donna) svolazzanti.
+               </note>
+               <note target="#O1V53">
+                  53. <ref>l’incerto freno</ref>: il freno, il morso (cioè la guida), retto da mano incerta.
+               </note>
+               <note target="#O1V55">
+                  55. <ref>e il sudor piove</ref>: vedi Monti, <emph>A Sigismondo Chigi</emph>, 177-8: 
+                  <quote source="#Monti_Chigi">
+                     <l>«[...] e piove a rivi</l> 
+                     <l>il sudor [...]».</l>
+                  </quote>
+               </note>
+               <note target="#O1V57">
+                  57. suonan...marini:, risuonano le
+                  profondità del mare. Ferrari: «le cavità del mare»; Casini: «dice
+                  <emph>antri marini</emph>, non già per le vicine montagne dell’Apennino, ma per
+                  significare che il fragore della corsa sfrenata si ripercoteva sul mare:
+                  cfr. la stessa espressione nell’ode II 1 (<bibl corresp="#Foscolo_OII">Qual dagli antri marini</bibl>)
+                  ». «Il F. usa “antro” in una significazione un po’ vaga e indeterminata non 
+                  accolta nei vocabolari; talora come linea sinuosa del mare (cfr. 
+                  <bibl corresp="#Foscolo_OII">Ode</bibl> II, I)
+                  o dei fiumi (<bibl corresp="#Foscolo_Sepolcri">Sepolcri</bibl>, 60; nel v. 283 dello stesso carme è 
+                  per “luogo sotterraneo, tomba”). Anche nelle <emph>U. L. di Jacopo Ortis</emph>(ediz. Cian II, 7, 16):
+                  <quote source="Foscolo_Ortis">
+                     “Non v’è gleba, non antro, non albero che non mi riviva nel cuore”.
+                  </quote>
+                  Lo Zanella, ricordando il F., nella <emph>Conchiglia fossile</emph> (vv. 8-9): 
+                  <quote source="#Zanella_Conchiglia">
+                     <l>“Occulta nel fondo</l> 
+                     <l>D’un <emph>antro marin</emph></l>
+                  </quote>”·, nel comune senso della parola, come nel F.
+                  stesso (<emph>Le Grazie</emph> 1, 171 di questa ediz.):
+                  <quote source="#Foscolo_Grazie">
+                     “Armoniosi antri"
+                  </quote> (in senso affine a “grotta, spelonca”, cfr. <bibl corresp="#Foscolo_Grazie">Grazie</bibl> II 
+                  24 e 96 pur di questa ediz.)» (Antognoni). 
+               </note>
+               <note target="#O1V58">
+                  58. <ref rend="bold">incalzato</ref>: affrettato. 
+               </note>
+               <note target="#O1V60">
+                  60. <ref rend="bold">traccia</ref>: nel senso di “cammino”,
+                  come in Dante, <emph>Par</emph>., VIII, 148: 
+                  <quote source="#Dante_Paradiso">
+                     «onde la traccia vostra è fuor di strada»
+                  </quote>
+                  .
+               </note>
+               <note target="#O1V62">
+                  62. <ref rend="bold">sordo...fremito</ref>: «senza badare alle grida e al fremito dei compagni
+                  della donna, che cercavano di frenare l’ardito animale» (Casini), oppure:
+                  «Sempre del mare; non, come altri crede, ai clamori della donna e al fremito 
+                  del mare» (De Robertis). E vedi Virgilio, <emph>Aen</emph>., III, 555-7: 
+                  <quote source="#Virgilio_Eneide">
+                     <l>«et gemitum ingentem pelagi pulsataque saxa</l> 
+                     <l>audimus longe fractasque ad litora voces,</l> 
+                     <l>exultantque vada atque aestu miscentur harenae»;</l>
+                  </quote>
+                  III, 566: 
+                  <quote source="#Virgilio_Eneide">
+                     <l>«Ter scopuli clamorem inter cava saxa dedere»</l>
+                  </quote>
+                  (Russo).
+               </note>
+               <note target="#O1V63">
+                  63. già già: «forma usata largamente dall’Alfieri nelle tragedie; p. es. in <emph>Saul</emph> A.
+                  IV Sc. IV: 
+                  <quote source="#Alfieri_Saul">
+                     “Già già crolla”
+                  </quote>; 
+                  <emph>Don Garzia</emph>
+                  A. IV Sc. I: 
+                  <quote source="#Alfieri_Garzia">
+                     “Già già la notte tacita s’inoltra”
+                  </quote>; Sc. VI: 
+                  <quote source="#Alfieri_Garzia">
+                     “Già già le negre ombre tutto velano”
+                  </quote>; Sc. VI: 
+                  <quote source="#Alfieri_Garzia">
+                     “Già già ritorco il piè”»
+                  </quote> (Antognoni). 
+               </note>
+               <note>
+                  65-6. Per acque in rima con nacque vedi a p. 235 la nota al v. 4 del sonetto 
+                  <bibl corresp="#Foscolo_SIX">
+                     Né più mai toccherò le sacre sponde
+                  </bibl>. 
+               </note>
+               <note target="#O1V66">
+                  66. <ref rend="bold">che una Dea</ref>: Venere. Nota il Ferrari: «Si ripensa a ciò, che non è giusto che
+                  quelle acque le quali dettero la vita a Venere si mostrino bramose della
+                  morte di questa donna che è nuova dea». 
+               </note>
+               <note target="#O1V67" targetEnd="#O1V68">
+                  67-8. <ref rend="bold">Se non...Ippolito</ref>: Nettuno, ancora dolente per la sorte di Ippolito, 
+                  in quanto, propostosi di vendicare Teseo (ingannato dalle insinuazioni di Fedra a carico 
+                  del figliastro Ippolito), slanciò contro quello, che guidava un cocchio lungo la riva
+                  del mare, un toro, così che i cavalli, imbizzarriti, trascinarono il giovane
+                  tra le onde. Oltre che in Euripide (<bibl corresp="#Euripide_Medea">Medea</bibl>), l’episodio si 
+                  ritrova in Ovidio, <bibl corresp="#Ovidio_Metamorfosi">Metam.</bibl>, XV, 500. 
+               </note>
+               <note target="#O1V69" targetEnd="#O1V70">
+                  69-70. <ref rend="bold">surse...talamo</ref>: «Fantoni, ode <emph>Il saggio 
+                  amico</emph> ecc. 39 
+                  <quote source="#Fantoni_Amico">
+                     “Surse dalle profonde Voragini dell’onde”
+                  </quote>» (Ferrari). 
+                  E vedi <emph>I novelli repubblicani</emph>, 58: 
+                  <quote source="#Foscolo_Repubblicani">
+                     «surse del Tebro da l’incognit’urna»
+                  </quote>. 
+               </note>
+               <note target="#O1V73" targetEnd="#O1V73">
+                  73-5. <ref rend="bold">arretrosse; rizzosse</ref>: «Forme per noi invecchiate, che il F. sceglieva per 
+                  dar idea della terribilità del momento. L’Ariosto (_O. F._ I,29) a rappresentar l’orrore
+                  dell’apparizione d’un morto: 
+                  <quote source="#Ariosto_Orlando">
+                     <l>“...ogni pelo <emph>arricciosse</emph></l> 
+                     <l>E scolorosse al Saracino il viso;</l> 
+                     <l>La voce ch’era per uscir fermosse...”.</l>
+                  </quote> E certo era nell’orecchio
+                  del F. il famoso sonetto di Onofrio Minzoni, ch’egli poi riferì e commentò 
+                  con i migliori sonetti della nostra lirica: 
+                  <quote source="#Minzoni_Gesù">
+                     <l>“Quando Gesù con l’ultimo lamento</l> 
+                     <l>Schiuse le tombe e la montagna scosse,</l> 
+                     <l>Adamo rabbuffato e sonnolento</l> 
+                     <l>Levò la testa e sovra <emph>i piè rizzosse_</emph></l>
+                  </quote> La variante <emph>"Scosse l'arcion" conferma che questi versi il F. sentiva 
+                  atti a dargli suoni rappresentativi
+                  efficaci, sì che tentò di accumular quei perfetti in -<emph>osse</emph>emph> anche 
+                  entro il verso, come nell’esempio qui su citato dell'<emph>Orlando Furioso</emph>. Poi, temendo
+                  forse d’esagerare quanto ai suoni o di usar voci più narrative che liriche,
+                  con movimento ardito abbandonò la forma del perfetto storico per quella
+                  del presente (<emph>Scuote</emph>) più viva» (Antognoni). E vedi <emph>Al Sole</emph>, 22:
+                  <quote source="#Foscolo_Sole">
+                     «la bufera lanciosse, e rïotoso»
+                  </quote>. 
+               </note>
+               <note target="#O1V78">
+                  78. <ref rend="bold">mal viva</ref>: semiviva, Il calco classiistico dell’aggettivo in 
+                  forma di litote è altrove attestato in Foscolo: vedi <emph>In morte del padre</emph>, 10: 
+                  <quote source="#Foscolo_Notte">
+                     <l>«deh basti! disse; e a la mal ferma palma»</l>
+                  </quote>; <bibl corresp="#Foscolo_OII">Alla amica risanata</bibl>, 46; 
+                  <emph >Sepolcri</emph>, 182: 
+                  <quote source="#Foscolo_Sepolcri">
+                     «da che le mal vietate Alpi [...]».
+                  </quote> 
+                  E vedi anche Tasso, <emph>Ger. Lib</emph>., VII, 119,
+                  5: 
+                  <quote source="#Tasso_Liberata">
+                     <l>«qui tra'l vulgo de’ morti e de’ mal vivi»</l>
+                  </quote> (Russo); Parini, <emph>Il dono</emph>,
+                  35: 
+                  <quote source="#Parini_Dono">
+                     «mal cauto da le insidie»
+                  </quote>; <emph>Il Mattino</emph>, 322: 
+                  <quote source="#Parini_Mattino">
+                     «[...] la prole mal secura [...]»
+                  </quote>; Lamberti, <emph>I cocchi</emph>, 2: 
+                  <quote source="#Lamberti_Cocchi">
+                     «fidato a briglie, e a mal securo ingegno»
+                  </quote>
+                  ; e nell'<emph>Omaggio</emph>, Gasparinetti, <emph>Ode</emph>, 68: 
+                  <quote source="#Gasparinetti_Ode">
+                     «e con mal certo sguardo»
+                  </quote>; 
+                  Monti, <emph>Alla Maestà di Napoleone I Imperatore de’ Francesi</emph> ecc., Milano, 
+                  Veladini, 1805, p. 8, v. 81: 
+                  <quote source="#Monti_Napoleone">
+                     <l>«e la patria piangean spenta, o mal viva»</l>
+                  </quote>
+               </note>
+               </noteGrp>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

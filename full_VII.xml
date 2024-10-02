@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Commenti alle poesie foscoliane, per un'edizione digitale. Edizione del sonetto 7, Solcata ho fronte secondo il testo dell'Edizione Nazionale, con le varianti</title>         
+            <respStmt>
+               <resp>Codfica</resp>
+               <persName xml:id="FP">Filippo Pelacci</persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Università di Parma</publisher>
+            <pubPlace>Università di Parma</pubPlace>
+            <date>20??</date>
+            <availability>
+               <p> Questa risorsa è liberamente accessibile per uso personale o scientifico. Ogni uso commerciale è vietato. </p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <!-- Edizione di riferimento per il testo base -->
+            <bibl xml:id="EN">
+               <author xml:id="UF">Ugo Foscolo</author>
+               <title>Le opere</title>
+               <editor xml:id="FrP">Francesco Pagliai</editor>
+               <editor xml:id="MS">Mario Scotti</editor>
+               <editor xml:id="GF">Gianfranco Folena</editor>
+               <biblScope unit="volume">I</biblScope>
+               <publisher>Le Monnier</publisher>
+               <pubPlace>Firenze</pubPlace>
+               <date when="1985">1985</date>
+            </bibl>
+         </sourceDesc>
+         <sourceDesc>
+            <!-- Lista degli esemplari a stampa del sonetto-->
+            <listWit>
+               <listWit xml:id="P">
+                  <witness>
+                     <bibl xml:id="Pg" type="rivista">
+                        <title>Nuovo giornale dei Letterati, tomo IV, Fascicolo di ottobre</title>
+                        <author>Ugo Foscolo</author>
+                        <date when="1802">1802</date>
+                        <pubPlace>Pisa</pubPlace>
+                        <editor>Tipografia della società letteraria</editor>
+                     </bibl>
+                  </witness>
+                  <witness>
+                     <bibl xml:id="Ps" type="volume">
+                        <title>Poesiw di Ugo Foscolo</title>
+                        <author>Ugo Foscolo</author>
+                        <editor>Tipografia della società letteraria</editor>
+                        <date when="1803">1803</date>
+                        <pubPlace>Pisa</pubPlace>
+                     </bibl>
+                  </witness>
+               </listWit>
+               <listWit xml:id="M">
+                  <witness>
+                     <bibl xml:id="Md" type="volume">
+                        <title>Poesie di Ugo Foscolo <emph>Sollicitae oblivia vitae</emph> Hor.</title>
+                        <author>Ugo Foscolo</author>
+                        <editor>De Stefanis</editor>
+                        <date when="1803">1803</date>
+                        <pubPlace>Milano</pubPlace>
+                     </bibl>
+                  </witness>
+                  <witness>
+                     <bibl xml:id="Mn" type="volume">
+                        <title>Poesie di Ugo Foscolo Seconda edizione accresciuta <emph>Sollicitae oblivia vitae</emph> Hor.</title>
+                        <author>Ugo Foscolo</author>
+                        <editor>Agnello Nobile</editor>
+                        <date when="1803">1803</date>
+                        <pubPlace>Milano</pubPlace>
+                     </bibl>
+                  </witness>
+               </listWit>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>Si codificano qui Odi e Sonetti secondo il testo dell'Edizione Nazionale. Oltre agli elementi strutturali, si codificano anche le diverse varianti occorse nelle edizioni a 
+            stampa precedenti quella apparsa a Milano per Agnello Nobile </p>
+         <variantEncoding method="double-end-point" location="internal"/>
+      </encodingDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div xml:id="S7">
+            <anchor xml:id="S7var1"/>
+            <lg xml:id="S7S1">
+               <l xml:id="S7V1">Solcata ho fronte, occhi incavati intenti,</l>
+               <l xml:id="S7V2">Crin fulvo, emunte guance, ardito aspetto,</l>
+               <l xml:id="S7V3">Labbro tumido<anchor xml:id="S7var2"/> acceso, e tersi denti,</l>
+               <l xml:id="S7V4">Capo chino, bel collo, e largo petto<seg xml:id="S7var3">;</seg></l>
+            </lg>
+            <lg xml:id="S7S2">
+               <l xml:id="S7V5">Giuste membra; vestir 
+                  <seg xml:id="S7var4">semplice eletto</seg>
+                  ;
+               </l>
+               <l xml:id="S7V6">Ratti i passi, i pensier, gli atti, gli accenti;</l>
+               <l xml:id="S7V7">Sobrio, umano, leal, prodigo, schietto;</l>
+               <l xml:id="S7V8">Avverso al mondo
+                  <seg xml:id="S7var5">,</seg> 
+                  avversi a me gli eventi
+                  <seg xml:id="S7var6">:</seg>
+               </l>
+            </lg>
+            <lg xml:id="S7S3">
+               <l xml:id="S7V9">Talor di lingua, e spesso di man prode;</l>
+               <l xml:id="S7V10">Mesto 
+                  <seg xml:id="S7var7">i più giorni</seg>
+                  e solo
+                  <seg xml:id="S7var8">,</seg>
+                  ognor pensoso
+                  <seg xml:id="S7var9">,</seg>
+               </l>
+               <l xml:id="S7V11">Pronto, iracondo, 
+                  <seg xml:id="S7var10">inquïeto</seg>
+                  , tenace<seg xml:id="S7var11">:</seg>
+               </l>
+            </lg>
+            <lg xml:id="S7S4"> 
+               <l xml:id="S7V12">Di vizj ricco e di virtù, do lode</l>
+               <l xml:id="S7V13">Alla ragion, ma corro ove al cor piace
+                  <seg xml:id="S7var12">:</seg>
+               </l>
+               <l xml:id="S7V14">Morte sol mi darà fama e riposo.</l>
+               </lg>
+         </div>
+      </body>
+      <back>
+         <listApp>
+            <app corresp="#S7var1">
+               <rdg wit="#P">
+                  <epigraph>
+                     <l>Ch'altri non ho di cui mi lagne.</l><bibl>PETR.</bibl>
+                  </epigraph>
+               </rdg>
+            </app>
+            <app corresp="#S7var2">
+               <rdg wit="#P">,</rdg>
+            </app>
+            <app corresp="#S7var3">
+               <rdg wit="#P">.</rdg>
+            </app>
+            <app corresp="#S7var4">
+               <rdg wit="P">mondo e negletto</rdg>
+            </app>
+            <app corresp="#S7var5">
+               <rdg wit="#P">;</rdg>
+            </app>
+            <app corresp="#S7var6">
+               <rdg wit="#P">.</rdg>
+            </app>
+            <app corresp="#S7var7">
+               <rdg wit="#P">sovente</rdg>
+            </app>
+            <app corresp="#S7var8">               
+               <rdg wit="#P">;</rdg>
+            </app>
+            <app corresp="#S7var9">
+               <rdg wit="#Mn"/>
+               <rdg wit="#P">;</rdg>
+            </app>
+            <app corresp="#S7var10">
+               <rdg wit="#P">inquíeto</rdg>
+            </app>
+            <app from="#S7V12" to="#S7V14">
+               <rdg wit="#P">
+                  <lg>
+                   <l>Errar, pentirmi, e alla ragion dar lode,</l>
+                   <l>Ma retta al cor; cercare or gloria, or pace,</l>
+                   <l>E da morte aspettar fama, e riposo.</l>
+                  </lg>
+               </rdg>
+            </app>
+            <app corresp="#S7var11">
+               <rdg wit="#P">;</rdg>
+            </app>
+            <app corresp="#S7var12">
+               <rdg wit="#Mn"/>
+            </app>
+         </listApp>
+      </back>
+   </text>
+</TEI>
