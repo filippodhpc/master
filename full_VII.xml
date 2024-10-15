@@ -134,14 +134,14 @@
       </body>
       <back>
          <listApp>
-            <app corresp="#S7var1">
+            <app from="#S7var1">
                <rdg wit="#P">
                   <epigraph>
                      <l>Ch'altri non ho di cui mi lagne.</l><bibl>PETR.</bibl>
                   </epigraph>
                </rdg>
             </app>
-            <app corresp="#S7var2">
+            <app from="#S7var2">
                <rdg wit="#P">,</rdg>
             </app>
             <app corresp="#S7var3">
