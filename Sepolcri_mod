@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Commenti alle poesie foscoliane, per un'edizione digitale</title>         
+            <respStmt>
+               <resp>Codfica</resp>
+               <persName xml:id="FP">Filippo Pelacci</persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Università di Parma</publisher>
+            <pubPlace>Università di Parma</pubPlace>
+            <date>20??</date>
+            <availability>
+               <p> Questa risorsa è liberamente accessibile per uso personale o scientifico. Ogni uso commerciale è vietato. </p>
+            </availability>
+         </publicationStmt>
+         <!-- Inserisco due distinti sourceDesc, uno relativo all'edizione dei Sepolcri presa a riferimento e l'altro in cui inserire le opere citate da Foscolo nelle note d'autore -->
+         <sourceDesc>
+            <bibl type="edizione_moderna">
+               <author xml:id="UF">Ugo Foscolo</author>
+               <title>Le opere</title>
+               <editor xml:id="FrP">Francesco Pagliai</editor>
+               <editor xml:id="MS">Mario Scotti</editor>
+               <editor xml:id="GF">Gianfranco Folena</editor>
+               <biblScope unit="volume">I</biblScope>
+               <publisher>Le Monnier</publisher>
+               <pubPlace>Firenze</pubPlace>
+               <date>1985</date>
+            </bibl>
+         </sourceDesc>
+         <sourceDesc>
+            <listBibl>
+               <bibl xml:id="Lucrezio_Natura">
+                  <author>Lucrezio</author>
+                  <title>De Rerum Natura</title>
+               </bibl>
+               <bibl xml:id="Terenzio_Eunuco">
+                  <author>Terenzio</author>
+                  <title>Eunuco</title>
+               </bibl>
+               <bibl xml:id="Varrone_LL">
+                  <author>Varrone</author>
+                  <title>De Lingua Latina</title>
+               </bibl>
+               <bibl xml:id="Pindemonte_Epistole">
+                  <author>Ippolito Pindemonte</author>
+                  <title>Epistole</title>
+               </bibl>
+               <bibl xml:id="Pindemonte_Campestri">
+                  <author>Ippolito Pindemonte</author>
+                  <title>Saggio di poesie campestri del cavalier Pindemonte</title>
+               </bibl>
+               <bibl xml:id="Parini_Giorno">
+                  <author>Giuseppe Parini</author>
+                  <title>Giorno</title>
+               </bibl>
+               <bibl xml:id="Virgilio_Eneide">
+                  <author>Virgilio</author>
+                  <title>Eneide</title>
+               </bibl>
+               <bibl xml:id="Apuleio_Socrate">
+                  <author>Apuleio</author>
+                  <title>de Deo Socrate</title>
+               </bibl>
+               <bibl xml:id="Persio_Satire">
+                  <author>Persio</author>
+                  <title>Satire</title>
+               </bibl>
+            </listBibl>
+            <listPerson>
+               <person xml:id="VA">
+                  <persName>Vittorio Alfieri</persName>
+               </person>
+            </listPerson>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+  <text>
+      <body>
+         <epigraph xml:lang="lat">
+            <l>Deorum Manium</l> 
+            <l>Iura Sancta Sunto</l>
+         </epigraph>
+         <lg xml:id="Se">
+            <l xml:id="Se1">All'ombra de' cipressi e dentro l'urne</l>
+            <l xml:id="Se2">Confortate di pianto è forse il sonno</l>
+            <l xml:id="Se3">Della morte men duro? Ove più il Sole</l>
+            <l xml:id="Se4">Per me alla terra non fecondi questa</l>
+            <l xml:id="Se5">Bella d'erbe famiglia e d'animali,</l>
+            <l xml:id="Se6">E quando vaghe di lusinghe innanzi</l>
+            <l xml:id="Se7">A me non danzeran l'ore future,</l>
+            <l xml:id="Se8">Nè da te, dolce amico, udrò più <anchor xml:id="note1.1"/>il verso</l>
+            <l xml:id="Se9">E la mesta armonia che lo governa,<anchor xml:id="note1.2"/></l> 
+            <l xml:id="Se10">Nè più nel cor mi parlerà lo spirto</l>
+            <l xml:id="Se11">Delle vergini Muse e dell'amore,</l>
+            <l xml:id="Se12">Unico spirto a mia vita raminga,</l>
+            <l xml:id="Se13">Qual fia ristoro a' dì perduti un sasso</l>
+            <l xml:id="Se14">Che distingua le mie dalle infinite</l>
+            <l xml:id="Se15">Ossa che in terra e in mar semina morte?</l>
+            <l xml:id="Se16">Vero è ben, Pindemonte! Anche la Speme,</l>
+            <l xml:id="Se17">Ultima Dea, fugge i sepolcri; e involve</l>
+            <l xml:id="Se18">Tutte cose l'obblio nella sua notte;</l>
+            <l xml:id="Se19">E una forza operosa le affatica</l>
+            <l xml:id="Se20">Di moto in moto; e l'uomo e le sue tombe</l>
+            <l xml:id="Se21">E l'estreme sembianze e le reliquie</l>
+            <l xml:id="Se22">Della terra e del ciel traveste il tempo.</l>
+            <l xml:id="Se23">Ma perchè pria del tempo a sè il mortale</l>
+            <l xml:id="Se24">Invidierà l'illusion che spento</l>
+            <l xml:id="Se25">Pur lo sofferma al limitar di Dite?</l>
+            <l xml:id="Se26">Non vive ei forse anche sotterra, quando</l>
+            <l xml:id="Se27">Gli sarà muta l'armonia del giorno,</l>
+            <l xml:id="Se28">Se può destarla con soavi cure</l>
+            <l xml:id="Se29">Nella mente de' suoi? Celeste è questa</l>
+            <l>...</l>
+            <l xml:id="Se44">Fra 'l compianto de' templi Acherontei</l>
+            <l>...</l>
+            <l xml:id="Se57">E tu gli ornavi del tuo riso <anchor xml:id="note2.1"/>i canti</l>
+            <l xml:id="Se58">Che il lombardo pungean Sardanapalo<anchor xml:id="note2.2"/></l>
+            <l>...</l>
+            <l xml:id="Se64">Fra queste piante ov'io siedo e sospiro</l>
+            <l>...</l>
+            <l xml:id="Se70">Forse tu <anchor xml:id="note3.1"/>fra plebei tumuli<anchor xml:id="note3.2"/> guardi</l>
+            <l>...</l>
+            <l xml:id="Se98">Ed <anchor xml:id="note4.1"/>are a' figli<anchor xml:id="note4.2"/>; e <anchor xml:id="note5.1"/>uscian quindi i responsi</l>
+            <l xml:id="Se99">De' domestici Lari,<anchor xml:id="note5.2"/> e fu temuto</l>
+            <l>...</l>
+            <l xml:id="Se117">Per memoria perenne, e <anchor xml:id="note6.1"/>prezïosi</l>
+            <l xml:id="Se119">Vasi accogliean le lagrime votive.</l>
+            <l xml:id="Se120">Rapìan gli amici una favilla al Sole</l>
+            <l xml:id="Se121">A illuminar la sotterranea notte</l>
+            <l xml:id="Se122">Perchè gli occhi dell'uom cercan morendo</l>
+            <l xml:id="Se123">Il Sole; e tutti l'ultimo sospiro</l>
+            <l xml:id="Se124">Mandano i petti alla fuggente luce.</l>
+            <l xml:id="Se125">Le fontane versando acque lustrali</l>
+            <l xml:id="Se126">Amaranti educavano e viole</l>
+            <l xml:id="Se127">Su la funebre zolla<anchor xml:id="note7"/>; e chi sedea</l>
+            <l xml:id="Se128">A libar latte e a raccontar sue pene</l>
+            <l xml:id="Se129">Ai cari estinti, una fragranza intorno</l>
+            <l xml:id="Se130">Sentìa qual d'aura de' beati Elisi.<anchor xml:id="note6.2"/></l>
+         </lg>
+      </body>
+     <back>
+        <head>NOTE</head>
+        <div>
+           <p>Ho desunto questo modo di poesia da’ Greci i quali dalle antiche tradizioni traevano sentenze morali e politiche 
+           presentandole non al sillogismo de’ lettori, ma alla fantasia ed al cuore. Lasciando agl’intendenti di giudicare sulla ragione 
+           poetica e morale di questo tentativo, scriverò le seguenti note onde rischiarare le allusioni alle cose contemporanee, ed indicare 
+           da’ quali fonti ho ricavato le tradizioni antiche.</p>
+        </div>        
+       <noteGrp> 
+          <note type="nota_autore" target="#note1.1" targetEnd="#note1.2" xml:id="n1">
+           <bibl corresp="#Pindemonte_Epistole">Epistole</bibl> e <bibl source="#Pindemonte_Campestri">Poesie campestri</bibl> di Ippolito Pindemonte
+         </note>
+         <note type="nota_autore" target="#Se44" xml:id="n2">
+          <quote source="#Lucrezio_Natura">
+              <l>Nam jam saepe homines patriam carosque parenteis</l>
+              <l>Prodiderunt vitare Acherusia Templa petentes.<anchor xml:id="note_bibl_A"/></l>
+          </quote>
+          <note type="nota_bibl_autore" target="#note_bibl_A" xml:id="nb1">Lucrezio, lib. III, 85.</note> 
+            E chiamavano 
+          <foreign xml:lang="lat">Templa</foreign> anche i cieli<anchor xml:id="note_bibl_B"/>.
+          <note type="nota_bibl_autore" target="#note_bibl_B" xml:id="nb2">
+            <bibl corresp="#Terenzio_Eunuco">Terenzio, Eunuco Att. III, Sc. 5,</bibl> Ed Ennio presso 
+            <bibl corresp="#Varrone_LL">Varrone de l. l. lib. vi.</bibl>
+          </note>
+         </note>
+          <note type="nota_autore" target="#note2.1" targetEnd="note2.2" xml:id="n3">
+             <bibl corresp="#Parini_Giorno">Il Giorno di Giuseppe Parini</bibl>
+          </note>
+          <note type="nota_autore" target="#Se64" xml:id="n4">
+             Il boschetto de' tigli nel sobborgo orientale di Milano
+          </note>
+          <note type="nota_autore" target="#note3.1" targetEnd="#note3.2" xml:id="n5">
+             Cimiterj suburbani di Milano
+          </note>
+          <note type="nota_autore" target="#note4.1" targetEnd="note4.2" xml:id="n6">
+             <quote source="#Virgilio_Eneide">                
+                   <l>Ergo instauramus Polydoro funus et ingens</l>
+                   <l>Aggeritur tumulo tellus, stant manibus ARAE</l>
+                   <l>Coeruleis moestae vittis atraque cupresso.<anchor xml:id="note_bibl_C"/></l>
+             </quote>
+             <note type="nota_bibl_autore" target="#note_bibl_C" xml:id="nb3">
+                Virgilio, Eneid. lib. III, 62. ibid. 305. lib. VI, 177, 
+             </note>
+          </note>
+          <note type="nota_autore" target="#note5.1" targetEnd="#note5.2" xml:id="n7">
+             <quote source="#Apuleio_Socrate">
+                <foreign xml:lang="lat">
+                   Manes animae dicuntur melioris meriti quae in corpore nostro
+                   Genii dicuntur; corpori renuntiantes, Lemures; cum domos 
+                   incursionibus infestarent, Larvae; contra si faventes essent, 
+                   LARES familiares<anchor xml:id="note_bibl_D"/>. 
+                </foreign>
+             </quote>
+             <note type="nota_bibl_autore" target="#note_bibl_D" xml:id="nb4">
+                Apuleio, de Deo Socratis.
+             </note>
+          </note>
+          <note type="nota_autore" target="#note6.1" targetEnd="#note6.2" xml:id="n8">
+             I vasi lacrimatorj, le lampade sepolcrali, e i riti funebri degli antichi. 
+          </note>
+          <note type="nota_autore" target="#Se126" targetEnd="#note7" xml:id="n9">
+             <quote source="#Persio_Satire">
+                <foreign xml:lang="lat">
+                   Nunc non e manibus illis,<lb/>
+                   Nunc non e tumulo fortunataque favilla<lb/>
+                   Nascentur violae<anchor xml:id="note_bibl_E"/>?
+                </foreign>
+             </quote>
+             <note type="nota_bibl_autore" target="#note_bibl_E" xml:id="nb5">
+                Persio, Sat. I, 38.
+             </note>
+          </note>
+       </noteGrp>
+     </back>
+  </text>
+</TEI>
